@@ -3,5 +3,6 @@
     <pages>
         <page name='set'/>
         <page name='Untitled Page'/>
+        <page name='Function'/>
     </pages>
 </playground>
