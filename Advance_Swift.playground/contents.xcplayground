@@ -4,5 +4,6 @@
         <page name='set'/>
         <page name='Untitled Page'/>
         <page name='Function'/>
+        <page name='Closure'/>
     </pages>
 </playground>
