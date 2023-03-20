@@ -7,21 +7,21 @@ var greeting = "Hello, playground"
 //: [Next](@next)
 //closure
 
-//closure without parameter and without return value
+//closure without parameter and without return parameter
 
 let sayHello:() -> Void = {
     print("Hello")
 }
 sayHello()
 
-//closure with parameter with return type
+//closure with parameter with return parameter
 let valu:(Int) -> Int = {
     value in
     return value
 }
 valu(5)
 
-//closure take two parameter with one return value
+//closure take two parameter with one return parameter
 
 let sum = {
     (value1 : Int,value2 : Int) -> Int  in
@@ -63,7 +63,7 @@ bi("shubham")
 
 //declare closure with one parameter
 let birthda:(String) -> () = {(name:String) -> () in
-    
+
 }
 var defreturn:(Int,Int) -> Double = {(width:Int,Height:Int) -> Double in
     return Double(width * Height)
@@ -116,27 +116,27 @@ let sort2 = names.sorted(by: {$0 < $1})
 print(sort2)
 
 let nam = "Darshan"
-let greeting = {
+let greeting1 = {
     print("Don't panic \(name)!")
 }
-var t = greeting()
+var t = greeting1()
 print(type(of: text))
 print(t)
 
 
 func addScore(points:Int) -> Int{
     let score = 45
-    
+
     let calculate = {
         return score + points
-        
-        
+
+
     }
-    
+
     var calc = calculate
     print(calc)
     return calculate()
-    
+
 }
 
 let abc = {
@@ -168,15 +168,15 @@ let sort3 = nam1.sorted(by: {$0 < $1})
 print(sort3)
 
 func someFunctionTHatTakeAClosure(closure: () -> Void){
-    
+
 }
 
 someFunctionTHatTakeAClosure(closure: {
-    
+
 })
 
 someFunctionTHatTakeAClosure() {
-    
+
 }
 
 let digitNames = [
@@ -204,20 +204,20 @@ func serve(customer customerprovider: @autoclosure () -> String)
 serve(customer: customersInline.remove(at: 2)
 //non-escaping closure
 
-//func calculate_Sum(array:Array<Int>,performSum:((Int) -> Void)){
-//    var sum = 0
-//    for i in array{
-//        sum += i
-//    }
-//    performSum(sum)
-//}
+func calculate_Sum(array:Array<Int>,performSum:((Int) -> Void)){
+    var sum = 0
+    for i in array{
+        sum += i
+    }
+    performSum(sum)
+}
 
-//func calculator(){
-//    var array = [0,1,2,3,4,5,6,7]
-//    calculate_Sum(array: array){sum in
-//        print(sum)
-//    }
-//}
+func calculator(){
+    var array = [0,1,2,3,4,5,6,7]
+    calculate_Sum(array: array){sum in
+        print(sum)
+    }
+}
 
 
 //escaping closure
@@ -242,3 +242,4 @@ func calculator_f(){
 }
 calculator_f()
 complitionHandler(sum_calc)
+
