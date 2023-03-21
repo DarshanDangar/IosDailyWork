@@ -144,3 +144,93 @@ enum Planet: Int {
     case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 print(Planet.venus.rawValue)
+
+enum SocialLogin {
+    case google
+    case facebook
+    case twiter
+    case default1
+}
+
+var login = SocialLogin.facebook
+
+switch login {
+case .google:
+    print("Login via google")
+case .facebook:
+    print("Login via Facebook")
+case .twiter:
+    print("you can not change password,because you are login via twiter")
+case .default1:
+    print("Login via email id or phone number")
+}
+
+//func soc(_ checkSocial: SocialLogin) -> Bool {
+//    switch checkSocial {
+//    case .facebook:
+//        return true
+//    case .google:
+//        return true
+//    case .twiter:
+//        return true
+//    case .default1:
+//        return true
+//    }
+//}
+//soc(.facebook)
+
+//using enum
+
+//var checkSocial:(SocialLogin) -> () = { login in
+//    switch login {
+//    case .google:
+//        print("Login via Google")
+//    case .facebook:
+//        print("Login via Facebook")
+//    case .twiter:
+//        print("Login via twiter")
+//    case .default1:
+//        print("Login via email or phone")
+//    }
+//}
+
+//checkSocial(.facebook)
+
+//if case .google = login {
+//    print("Login via Google")
+//}else if case .facebook = login {
+//    print("Login via Facebook")
+//}else if case .twiter = login {
+//    print("Login via twiter")
+//}else {
+//    print("Login via email id or mobile phone")
+//}
+
+//indirect indicate that enum case recursive by writing before it
+
+//recursive Enumeration
+
+enum AirthmaticExpression {
+    case number(Int)
+    indirect case addition(AirthmaticExpression, AirthmaticExpression)
+    indirect case multiplication(AirthmaticExpression, AirthmaticExpression)
+    
+}
+
+var five = AirthmaticExpression.number(5)
+var four = AirthmaticExpression.number(4)
+var sum = AirthmaticExpression.addition(five, four)
+var product = AirthmaticExpression.multiplication(sum, AirthmaticExpression.number(3))
+
+func evaluate(_ expression: AirthmaticExpression) -> Int {
+    switch expression {
+    case let .number(value):
+        return value
+    case let .addition(value1, value2):
+        return evaluate(value1) + evaluate(value2)
+    case let .multiplication(value1, value2):
+        return evaluate(value1) * evaluate(value2)
+    }
+}
+print(evaluate(sum))
+print(evaluate(product))
