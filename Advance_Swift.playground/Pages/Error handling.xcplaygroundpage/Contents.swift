@@ -59,3 +59,25 @@ enum OptionalEnum {
 //func someThrowingFunction() throws -> Int {
 //    return
 //}
+
+
+//Specifying cleanup action
+//use defer
+
+func deferr() {
+    defer {print("defer1 called")}
+    defer {print("defer2 called")}
+    print("function called")
+}
+deferr()
+
+func deferTry() -> Int {
+    print("function deferr called")
+    defer { print("return after defer called")}
+    return 5
+   
+}
+
+var defertry = deferTry()
+print(defertry)
+
