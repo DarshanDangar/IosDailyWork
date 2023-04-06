@@ -153,6 +153,7 @@ enum SocialLogin {
 }
 
 var login = SocialLogin.facebook
+print(type(of: login))
 
 switch login {
 case .google:

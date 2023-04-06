@@ -53,6 +53,10 @@ for i in studentid{
 
 var seta:Set = [1,3,5,7,9]
 var setb:Set = [2,4,6,8]
+var arrc = [1,3,5,5,7,9]
+setb.formUnion(arrc)
+setb.contains(3)
+//setb.union(seta)
 var setc = seta.union(setb)
 print(seta)
 print(setb)

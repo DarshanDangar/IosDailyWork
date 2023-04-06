@@ -7,5 +7,16 @@
         <page name='Closure'/>
         <page name='enum'/>
         <page name='Class and Struct'/>
+        <page name='ARC'/>
+        <page name='Initialization Deinitialization'/>
+        <page name='Properties'/>
+        <page name='Methods'/>
+        <page name='Subscripts'/>
+        <page name='optional chaining'/>
+        <page name='Error handling'/>
+        <page name='Extension'/>
+        <page name='Nested types'/>
+        <page name='Delegates'/>
+        <page name='Protocol and Delegates'/>
     </pages>
 </playground>
