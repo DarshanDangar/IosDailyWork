@@ -10,10 +10,11 @@ import UIKit
 class ContactsDetailsTableViewCell: UITableViewCell {
     
     // MARK: Outlets
-    
     @IBOutlet weak var imgPerson: UIImageView!
     @IBOutlet weak var lblPersonName: UILabel!
     @IBOutlet weak var lblPhoneNo: UILabel!
+    @IBOutlet weak var topCon: NSLayoutConstraint!
+    @IBOutlet weak var botomCon: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

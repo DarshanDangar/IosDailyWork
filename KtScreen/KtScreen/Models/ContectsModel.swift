@@ -8,12 +8,13 @@
 import Foundation
 
 struct ContectsModel {
+    
     let imgOfperson: String
     let nameOfPerson: String
     let contactNo1: String
     let contactNo2: String?
     
-    static var arrContactDetails: [ContectsModel] = [
+    static let arrContactDetails: [ContectsModel] = [
         ContectsModel(imgOfperson: "Oval1", nameOfPerson: "James Franco", contactNo1: "215-854-8542", contactNo2: nil),
         ContectsModel(imgOfperson: "Oval2", nameOfPerson: "David Elsonbaty", contactNo1: "245-965-7125", contactNo2: nil),
         ContectsModel(imgOfperson: "Oval3", nameOfPerson: "Ramon Bateman", contactNo1: "263-845-7458", contactNo2: nil),

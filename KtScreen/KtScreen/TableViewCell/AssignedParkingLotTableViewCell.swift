@@ -28,9 +28,4 @@ class AssignedParkingLotTableViewCell: UITableViewCell {
         lblAddressOfParkingLot.text = data.parkingLotAddress
     }
     
-    
-    
-    @IBAction func btnForward(_ sender: UIButton) {
-        
-    }
 }

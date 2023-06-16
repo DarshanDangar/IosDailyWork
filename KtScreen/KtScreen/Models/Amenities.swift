@@ -7,6 +7,7 @@
 
 import Foundation
 struct AmenitiesModel {
+    
     let imgAmenitiesType: String
     let lblNameofAmenities: String
     
@@ -19,4 +20,5 @@ struct AmenitiesModel {
         AmenitiesModel(imgAmenitiesType: "Terms of Service", lblNameofAmenities: "Terms of Service"),
         AmenitiesModel(imgAmenitiesType: "In and Out", lblNameofAmenities: "In and Out"),
     ]
+    
 }

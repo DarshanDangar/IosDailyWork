@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D0C32B22A3B739F0072D800 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0C32B12A3B739F0072D800 /* SectionHeader.swift */; };
-		7D0C32B42A3B73B60072D800 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0C32B32A3B73B60072D800 /* SectionHeader.xib */; };
+		7DA562CC2A3C294A0017F45D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA562CB2A3C294A0017F45D /* NavigationController.swift */; };
+		7DA562CF2A3C2F8B0017F45D /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA562CD2A3C2F8B0017F45D /* SectionHeaderCell.swift */; };
+		7DA562D02A3C2F8B0017F45D /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA562CE2A3C2F8B0017F45D /* SectionHeaderCell.xib */; };
+		7DA562D32A3C45790017F45D /* Poppins-1 in Resources */ = {isa = PBXBuildFile; fileRef = 7DA562D22A3C45790017F45D /* Poppins-1 */; };
 		7DBDF33D2A3AF62700379E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF33C2A3AF62700379E61 /* AppDelegate.swift */; };
 		7DBDF33F2A3AF62700379E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF33E2A3AF62700379E61 /* SceneDelegate.swift */; };
-		7DBDF3412A3AF62700379E61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3402A3AF62700379E61 /* ViewController.swift */; };
-		7DBDF3442A3AF62700379E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3422A3AF62700379E61 /* Main.storyboard */; };
 		7DBDF3462A3AF62800379E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3452A3AF62800379E61 /* Assets.xcassets */; };
 		7DBDF3492A3AF62800379E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3472A3AF62800379E61 /* LaunchScreen.storyboard */; };
 		7DBDF3552A3AF7A600379E61 /* AssignedParkingLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3542A3AF7A500379E61 /* AssignedParkingLotTableViewCell.swift */; };
@@ -30,7 +30,7 @@
 		7DBDF3772A3B1D0000379E61 /* ParkingLotDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3762A3B1D0000379E61 /* ParkingLotDetailsVC.swift */; };
 		7DBDF3792A3B222500379E61 /* Amenities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3782A3B222500379E61 /* Amenities.swift */; };
 		7DBDF37C2A3B274B00379E61 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF37B2A3B274B00379E61 /* Sections.swift */; };
-		7DBDF37E2A3B40A400379E61 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF37D2A3B40A400379E61 /* File.swift */; };
+		7DBDF37E2A3B40A400379E61 /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */; };
 		7DBDF3852A3B459600379E61 /* TermsAndConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3832A3B459600379E61 /* TermsAndConditionTableViewCell.swift */; };
 		7DBDF3862A3B459600379E61 /* TermsAndConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3842A3B459600379E61 /* TermsAndConditionTableViewCell.xib */; };
 		7DBDF3882A3B463400379E61 /* RedeemStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3872A3B463400379E61 /* RedeemStepModel.swift */; };
@@ -39,13 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D0C32B12A3B739F0072D800 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		7D0C32B32A3B73B60072D800 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
+		7DA562CB2A3C294A0017F45D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		7DA562CD2A3C2F8B0017F45D /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
+		7DA562CE2A3C2F8B0017F45D /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
+		7DA562D22A3C45790017F45D /* Poppins-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Poppins-1"; sourceTree = "<group>"; };
 		7DBDF3392A3AF62700379E61 /* KtScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KtScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBDF33C2A3AF62700379E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DBDF33E2A3AF62700379E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7DBDF3402A3AF62700379E61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7DBDF3432A3AF62700379E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DBDF3452A3AF62800379E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DBDF3482A3AF62800379E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DBDF34A2A3AF62800379E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		7DBDF3762A3B1D0000379E61 /* ParkingLotDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotDetailsVC.swift; sourceTree = "<group>"; };
 		7DBDF3782A3B222500379E61 /* Amenities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenities.swift; sourceTree = "<group>"; };
 		7DBDF37B2A3B274B00379E61 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
-		7DBDF37D2A3B40A400379E61 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
 		7DBDF3832A3B459600379E61 /* TermsAndConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionTableViewCell.swift; sourceTree = "<group>"; };
 		7DBDF3842A3B459600379E61 /* TermsAndConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionTableViewCell.xib; sourceTree = "<group>"; };
 		7DBDF3872A3B463400379E61 /* RedeemStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemStepModel.swift; sourceTree = "<group>"; };
@@ -83,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DA562CA2A3C29320017F45D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DA562CB2A3C294A0017F45D /* NavigationController.swift */,
+				7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA562D12A3C456B0017F45D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7DA562D22A3C45790017F45D /* Poppins-1 */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7DBDF3302A3AF62700379E61 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,8 @@
 		7DBDF33B2A3AF62700379E61 /* KtScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7DA562D12A3C456B0017F45D /* Fonts */,
+				7DA562CA2A3C29320017F45D /* Extensions */,
 				7DBDF37A2A3B273400379E61 /* Enum */,
 				7DBDF3662A3B00D100379E61 /* Models */,
 				7DBDF35E2A3AF81A00379E61 /* TableViewCell */,
@@ -109,11 +128,8 @@
 				7DBDF3602A3AF87E00379E61 /* StoryBoards */,
 				7DBDF3612A3AF8A600379E61 /* ViewControllers */,
 				7DBDF35F2A3AF86100379E61 /* AppDelegate */,
-				7DBDF3422A3AF62700379E61 /* Main.storyboard */,
-				7DBDF3472A3AF62800379E61 /* LaunchScreen.storyboard */,
 				7DBDF3452A3AF62800379E61 /* Assets.xcassets */,
 				7DBDF34A2A3AF62800379E61 /* Info.plist */,
-				7DBDF37D2A3B40A400379E61 /* File.swift */,
 			);
 			path = KtScreen;
 			sourceTree = "<group>";
@@ -131,8 +147,8 @@
 				7DBDF3842A3B459600379E61 /* TermsAndConditionTableViewCell.xib */,
 				7DBDF38D2A3B55B900379E61 /* StepToRedeemTableViewCell.swift */,
 				7DBDF38E2A3B55B900379E61 /* StepToRedeemTableViewCell.xib */,
-				7D0C32B12A3B739F0072D800 /* SectionHeader.swift */,
-				7D0C32B32A3B73B60072D800 /* SectionHeader.xib */,
+				7DA562CD2A3C2F8B0017F45D /* SectionHeaderCell.swift */,
+				7DA562CE2A3C2F8B0017F45D /* SectionHeaderCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBDF3582A3AF7EB00379E61 /* AssignedParkingLot.storyboard */,
+				7DBDF3472A3AF62800379E61 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -157,7 +174,6 @@
 		7DBDF3612A3AF8A600379E61 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7DBDF3402A3AF62700379E61 /* ViewController.swift */,
 				7DBDF35C2A3AF80B00379E61 /* AssignedParkingLotVC.swift */,
 				7DBDF3762A3B1D0000379E61 /* ParkingLotDetailsVC.swift */,
 			);
@@ -250,15 +266,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA562D32A3C45790017F45D /* Poppins-1 in Resources */,
+				7DA562D02A3C2F8B0017F45D /* SectionHeaderCell.xib in Resources */,
 				7DBDF3572A3AF7AC00379E61 /* AssignedParkingLotTableViewCell.xib in Resources */,
 				7DBDF3592A3AF7EB00379E61 /* AssignedParkingLot.storyboard in Resources */,
 				7DBDF3492A3AF62800379E61 /* LaunchScreen.storyboard in Resources */,
 				7DBDF36A2A3B04B400379E61 /* HeaderViewTableViewCell.xib in Resources */,
 				7DBDF3862A3B459600379E61 /* TermsAndConditionTableViewCell.xib in Resources */,
 				7DBDF3462A3AF62800379E61 /* Assets.xcassets in Resources */,
-				7D0C32B42A3B73B60072D800 /* SectionHeader.xib in Resources */,
 				7DBDF3732A3B163D00379E61 /* ContactsDetailsTableViewCell.xib in Resources */,
-				7DBDF3442A3AF62700379E61 /* Main.storyboard in Resources */,
 				7DBDF3902A3B55B900379E61 /* StepToRedeemTableViewCell.xib in Resources */,
 				7DBDF36F2A3B0FD200379E61 /* AmenitiesCollectionViewCell.xib in Resources */,
 			);
@@ -277,15 +293,15 @@
 				7DBDF3692A3B04B400379E61 /* HeaderViewTableViewCell.swift in Sources */,
 				7DBDF38F2A3B55B900379E61 /* StepToRedeemTableViewCell.swift in Sources */,
 				7DBDF3552A3AF7A600379E61 /* AssignedParkingLotTableViewCell.swift in Sources */,
-				7DBDF3412A3AF62700379E61 /* ViewController.swift in Sources */,
 				7DBDF35D2A3AF80B00379E61 /* AssignedParkingLotVC.swift in Sources */,
 				7DBDF3852A3B459600379E61 /* TermsAndConditionTableViewCell.swift in Sources */,
 				7DBDF33D2A3AF62700379E61 /* AppDelegate.swift in Sources */,
 				7DBDF3772A3B1D0000379E61 /* ParkingLotDetailsVC.swift in Sources */,
 				7DBDF3652A3B00C600379E61 /* AssignedParkingLotModel.swift in Sources */,
-				7DBDF37E2A3B40A400379E61 /* File.swift in Sources */,
+				7DA562CC2A3C294A0017F45D /* NavigationController.swift in Sources */,
+				7DBDF37E2A3B40A400379E61 /* SegmentedController.swift in Sources */,
 				7DBDF36E2A3B0FD200379E61 /* AmenitiesCollectionViewCell.swift in Sources */,
-				7D0C32B22A3B739F0072D800 /* SectionHeader.swift in Sources */,
+				7DA562CF2A3C2F8B0017F45D /* SectionHeaderCell.swift in Sources */,
 				7DBDF3792A3B222500379E61 /* Amenities.swift in Sources */,
 				7DBDF3752A3B194900379E61 /* ContectsModel.swift in Sources */,
 				7DBDF33F2A3AF62700379E61 /* SceneDelegate.swift in Sources */,
@@ -295,14 +311,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7DBDF3422A3AF62700379E61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DBDF3432A3AF62700379E61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7DBDF3472A3AF62800379E61 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,7 +447,7 @@
 				INFOPLIST_FILE = KtScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AssignedParkingLot;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,7 +474,7 @@
 				INFOPLIST_FILE = KtScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AssignedParkingLot;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

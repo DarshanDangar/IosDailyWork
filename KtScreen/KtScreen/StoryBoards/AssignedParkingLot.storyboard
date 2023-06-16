@@ -3,12 +3,13 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assigned Parking lot-->
+        <!--Assigned Parking LotVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="AssignedParkingLotVC" id="Y6W-OH-hqX" customClass="AssignedParkingLotVC" customModule="KtScreen" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,19 +21,32 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-c2-XUo">
+                                <rect key="frame" x="327" y="732" width="50" height="50"/>
+                                <color key="backgroundColor" name="navigationBarBG"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y9Y-p7-bA8"/>
+                                    <constraint firstAttribute="width" constant="50" id="fHf-1I-oCI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Message"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ov6-c2-XUo" secondAttribute="trailing" constant="16" id="7ja-az-zbR"/>
                             <constraint firstItem="Mi0-tg-m0o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Atx-rq-iYJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ov6-c2-XUo" secondAttribute="bottom" constant="36" id="Bo7-4v-ifL"/>
                             <constraint firstItem="Mi0-tg-m0o" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="S8I-qK-0Tm"/>
                             <constraint firstItem="Mi0-tg-m0o" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eQe-lZ-Uyz"/>
                             <constraint firstItem="Mi0-tg-m0o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pLr-gz-vZL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Assigned Parking lot" id="njq-9m-PwE"/>
+                    <navigationItem key="navigationItem" id="njq-9m-PwE"/>
                     <connections>
                         <outlet property="assignedParkingLotTableView" destination="Mi0-tg-m0o" id="OGW-R3-GWB"/>
+                        <outlet property="btnMessage" destination="ov6-c2-XUo" id="g7r-Hb-0H8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -47,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M6p-dg-96r">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M6p-dg-96r">
                                 <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -77,6 +91,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dpg-Hr-b1v">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="navigationBarBG"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="navigationBarBG"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -89,6 +109,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Message" width="20" height="20"/>
+        <namedColor name="navigationBarBG">
+            <color red="0.027000000700354576" green="0.45899999141693115" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

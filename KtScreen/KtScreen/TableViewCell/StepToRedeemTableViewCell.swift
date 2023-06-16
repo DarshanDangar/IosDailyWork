@@ -10,7 +10,6 @@ import UIKit
 class StepToRedeemTableViewCell: UITableViewCell {
     
     // MARK: Outlets
-    
     @IBOutlet weak var imgStepNo: UIImageView!
     @IBOutlet weak var lblStepDescription: UILabel!
     @IBOutlet weak var imgDiscription: UIImageView!

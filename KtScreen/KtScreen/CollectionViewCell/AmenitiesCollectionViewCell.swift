@@ -10,7 +10,6 @@ import UIKit
 class AmenitiesCollectionViewCell: UICollectionViewCell {
     
     // MARK: Outlets
-    
     @IBOutlet weak var imgAmenities: UIImageView!
     @IBOutlet weak var lblAmenitiesName: UILabel!
     

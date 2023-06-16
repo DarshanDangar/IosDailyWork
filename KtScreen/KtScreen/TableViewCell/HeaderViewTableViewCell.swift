@@ -9,7 +9,6 @@ import UIKit
 
 class HeaderViewTableViewCell: UITableViewCell {
     
-    
     // MARK: Outlets
     @IBOutlet weak var imgParkingLot: UIImageView!
     @IBOutlet weak var lblLocationId: UILabel!
@@ -30,7 +29,7 @@ class HeaderViewTableViewCell: UITableViewCell {
         amentiesCollectionView.delegate = self
         amentiesCollectionView.dataSource = self
         registerCell()
-        
+        segmentController.setTitleColor(.white, state: .selected)
     }
     
     // MARK: register cell
@@ -46,13 +45,11 @@ class HeaderViewTableViewCell: UITableViewCell {
         lblOperatingHours.text = data.oeratingHour
         lblOperatingHours.text = data.oeratingHour
         lblLocationPhoneNo.text = data.locationPhoneNo
-//        imgParkingLot.image = UIImage(named: AssignedParkingLotModel.arrParkingLotInfo[index].imgParkingLot)
     }
     
-    
+    // MARK: IbActions
     @IBAction func onTapSegmentController(_ sender: UISegmentedControl) {
         segmentController.setTitleColor(.white, state: .selected)
-        
     }
     
 }
@@ -78,7 +75,7 @@ extension HeaderViewTableViewCell: UICollectionViewDataSource {
 extension HeaderViewTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width - 25) / 2, height: 20)
+        return CGSize(width: (collectionView.frame.width - 10) / 2, height: 20)
     }
     
 }

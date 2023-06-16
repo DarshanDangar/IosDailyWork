@@ -9,9 +9,11 @@ import UIKit
 
 class ParkingLotDetailsVC: UIViewController {
     
-    var currentIndex = 0
     // MARK: Outlets
     @IBOutlet weak var detailsOfParkingLotTableView: UITableView!
+    
+    // MARK: Variables
+    var currentIndex = 0
     
      // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -23,9 +25,12 @@ class ParkingLotDetailsVC: UIViewController {
     private func initialSetUp() {
         detailsOfParkingLotTableView.delegate = self
         detailsOfParkingLotTableView.dataSource = self
+        detailsOfParkingLotTableView.estimatedRowHeight = 120
         let header =  UINib(nibName: "HeaderViewTableViewCell", bundle: nil).instantiate(withOwner: nil).first as? HeaderViewTableViewCell
         header?.configCell(data: AssignedParkingLotModel.arrParkingLotInfo[currentIndex])
         detailsOfParkingLotTableView.tableHeaderView = header
+        navigationController?.navigationBar.backItem?.title = ""
+        detailsOfParkingLotTableView.sectionHeaderTopPadding = 5
         registerCell()
     }
     
@@ -36,32 +41,39 @@ class ParkingLotDetailsVC: UIViewController {
         detailsOfParkingLotTableView.register(UINib(nibName: "ContactsDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "ContactsDetailsTableViewCell")
         detailsOfParkingLotTableView.register(UINib(nibName: "StepToRedeemTableViewCell", bundle: nil), forCellReuseIdentifier: "StepToRedeemTableViewCell")
         detailsOfParkingLotTableView.register(UINib(nibName: "TermsAndConditionTableViewCell", bundle: nil), forCellReuseIdentifier: "TermsAndConditionTableViewCell")
+        detailsOfParkingLotTableView.register(UINib(nibName: "SectionHeaderCell", bundle: nil), forCellReuseIdentifier: "SectionHeaderCell")
     }
     
 }
 
 // MARK: UITableView Delegates
-extension ParkingLotDetailsVC: UITableViewDelegate {}
-
-// MARK: UITableView DataSource
-extension ParkingLotDetailsVC: UITableViewDataSource {
+extension ParkingLotDetailsVC: UITableViewDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return Sections.allCases.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 4 {
-            return UITableView.automaticDimension
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
         } else {
             return UITableView.automaticDimension
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+    }
+    
+}
+
+// MARK: UITableView DataSource
+extension ParkingLotDetailsVC: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Sections.arrSections.count
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return ContectsModel.arrContactDetails.count
+                return ContectsModel.arrContactDetails.count
         case 1:
             return ContectsModel.superViserDetails.count
         case 2:
@@ -75,18 +87,25 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let view = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderCell") as? SectionHeaderCell else {return UIView()}
         switch section {
+        case 0:
+            return nil
         case 1:
-            return "Supervisor Details"
+            view.configCell(data: Sections.SuperVisiorDetails.rawValue)
+            return view
         case 2:
-            return "Maintenance Details"
+            view.configCell(data: Sections.MaintenanceDetails.rawValue)
+            return view
         case 3:
-            return "Step to Redeem"
+            view.configCell(data: Sections.SteptoRedeem.rawValue)
+            return view
         case 4:
-            return "Terms & Conditions"
+            view.configCell(data: Sections.TermsConditions.rawValue)
+            return view
         default:
-            return ""
+            return UIView()
         }
     }
     
@@ -94,18 +113,20 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsDetailsTableViewCell", for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
-            let dataForParticularIndex = ContectsModel.arrContactDetails[indexPath.row]
-            cell.configCell(data: dataForParticularIndex)
-            return cell
+                let dataForParticularIndex = ContectsModel.arrContactDetails[indexPath.row]
+                cell.configCell(data: dataForParticularIndex)
+                return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsDetailsTableViewCell", for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
             let dataForParticularIndex = ContectsModel.superViserDetails[indexPath.row]
+            cell.botomCon.constant = 14
             cell.configCell(data: dataForParticularIndex)
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsDetailsTableViewCell", for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
             let dataForParticularIndex = ContectsModel.MaintenanceDetails[indexPath.row]
             cell.configCell(data: dataForParticularIndex)
+            cell.botomCon.constant = 14
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "StepToRedeemTableViewCell", for: indexPath) as? StepToRedeemTableViewCell else {return UITableViewCell()}
@@ -115,12 +136,10 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TermsAndConditionTableViewCell", for: indexPath) as? TermsAndConditionTableViewCell else {return UITableViewCell()}
             return cell
-            
         default:
             break
         }
         return UITableViewCell()
     }
-    
     
 }

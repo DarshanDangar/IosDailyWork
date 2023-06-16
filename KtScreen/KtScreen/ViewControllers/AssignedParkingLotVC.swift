@@ -10,6 +10,7 @@ import UIKit
 class AssignedParkingLotVC: UIViewController {
     
     // MARK: Outlets
+    @IBOutlet weak var btnMessage: UIButton!
     @IBOutlet weak var assignedParkingLotTableView: UITableView!
     
     // MARK: View LifeCycle
@@ -18,11 +19,21 @@ class AssignedParkingLotVC: UIViewController {
         initialSetUp()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.topItem?.setRightBarButton(UIBarButtonItem(image: UIImage(named: "notification"), style: .plain, target: storyboard, action: nil), animated: true)
+        navigationController?.navigationBar.topItem?.setLeftBarButton(UIBarButtonItem(image: UIImage(named: "Image"), style: .plain, target: storyboard, action: nil), animated: true)
+        navigationController?.navigationBar.topItem?.title = "Assigned Parking Lot"
+    }
+    
     // MARK: iniitialSetUp
     func initialSetUp() {
         assignedParkingLotTableView.delegate = self
         assignedParkingLotTableView.dataSource = self
+        assignedParkingLotTableView.estimatedRowHeight = 100
         assignedParkingLotTableView.register(UINib(nibName: "AssignedParkingLotTableViewCell", bundle: nil), forCellReuseIdentifier: "AssignedParkingLotTableViewCell")
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "navigationBarBG")
+        navigationController?.navigationBar.tintColor = .white
+        btnMessage.layer.cornerRadius = btnMessage.frame.height / 2
     }
     
 }
@@ -31,10 +42,12 @@ class AssignedParkingLotVC: UIViewController {
 extension AssignedParkingLotVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ParkingLotDetailsVC") as! ParkingLotDetailsVC
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ParkingLotDetailsVC") as? ParkingLotDetailsVC else {return}
         vc.currentIndex = indexPath.row
+        vc.navigationItem.title = "Parking Lot Details"
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -54,5 +67,5 @@ extension AssignedParkingLotVC: UITableViewDataSource {
         cell.configCell(data: dataForParticularIndex)
         return cell
     }
-   
+    
 }
