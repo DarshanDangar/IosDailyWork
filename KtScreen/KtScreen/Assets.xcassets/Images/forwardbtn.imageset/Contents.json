@@ -3,16 +3,6 @@
     {
       "filename" : "Arrow 1.png",
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "Arrow.png",
-      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -34,7 +34,7 @@ class HeaderViewTableViewCell: UITableViewCell {
     
     // MARK: register cell
     func registerCell() {
-        amentiesCollectionView.register(UINib(nibName: "AmenitiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AmenitiesCollectionViewCell")
+        amentiesCollectionView.register(UINib(nibName: Constants.Cell.amenitiesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cell.amenitiesCollectionViewCell)
     }
     
     // MARK: config Cell
@@ -64,7 +64,7 @@ extension HeaderViewTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AmenitiesCollectionViewCell", for: indexPath) as? AmenitiesCollectionViewCell else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cell.amenitiesCollectionViewCell, for: indexPath) as? AmenitiesCollectionViewCell else {return UICollectionViewCell()}
         let dataOfParticularIndex = AmenitiesModel.arrAmenitiesDetails[indexPath.row]
         cell.configCell(data: dataOfParticularIndex)
         return cell

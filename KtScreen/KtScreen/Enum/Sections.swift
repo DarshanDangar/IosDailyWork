@@ -7,13 +7,11 @@
 
 import Foundation
 
-enum Sections: String {
+enum Sections: String, CaseIterable {
     case HeaderView = "HeaderView"
     case Attendant = "Attendant"
     case SuperVisiorDetails = "SuperVisior Details"
     case MaintenanceDetails = "Maintenance Details"
     case SteptoRedeem = "Step to Redeem"
     case TermsConditions = "Terms & Conditions"
-    
-    static var arrSections = [HeaderView, Attendant, SuperVisiorDetails, MaintenanceDetails, SteptoRedeem,TermsConditions]
 }

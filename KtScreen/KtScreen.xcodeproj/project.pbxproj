@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7DA562CC2A3C294A0017F45D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA562CB2A3C294A0017F45D /* NavigationController.swift */; };
+		7D73D4632A3D956C0048DCE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D73D4622A3D956C0048DCE7 /* Constants.swift */; };
 		7DA562CF2A3C2F8B0017F45D /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA562CD2A3C2F8B0017F45D /* SectionHeaderCell.swift */; };
 		7DA562D02A3C2F8B0017F45D /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA562CE2A3C2F8B0017F45D /* SectionHeaderCell.xib */; };
 		7DA562D32A3C45790017F45D /* Poppins-1 in Resources */ = {isa = PBXBuildFile; fileRef = 7DA562D22A3C45790017F45D /* Poppins-1 */; };
@@ -26,20 +26,20 @@
 		7DBDF36F2A3B0FD200379E61 /* AmenitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF36D2A3B0FD200379E61 /* AmenitiesCollectionViewCell.xib */; };
 		7DBDF3722A3B163D00379E61 /* ContactsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3702A3B163D00379E61 /* ContactsDetailsTableViewCell.swift */; };
 		7DBDF3732A3B163D00379E61 /* ContactsDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3712A3B163D00379E61 /* ContactsDetailsTableViewCell.xib */; };
-		7DBDF3752A3B194900379E61 /* ContectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3742A3B194900379E61 /* ContectsModel.swift */; };
+		7DBDF3752A3B194900379E61 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3742A3B194900379E61 /* ContactModel.swift */; };
 		7DBDF3772A3B1D0000379E61 /* ParkingLotDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3762A3B1D0000379E61 /* ParkingLotDetailsVC.swift */; };
 		7DBDF3792A3B222500379E61 /* Amenities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3782A3B222500379E61 /* Amenities.swift */; };
 		7DBDF37C2A3B274B00379E61 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF37B2A3B274B00379E61 /* Sections.swift */; };
 		7DBDF37E2A3B40A400379E61 /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */; };
 		7DBDF3852A3B459600379E61 /* TermsAndConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3832A3B459600379E61 /* TermsAndConditionTableViewCell.swift */; };
 		7DBDF3862A3B459600379E61 /* TermsAndConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF3842A3B459600379E61 /* TermsAndConditionTableViewCell.xib */; };
-		7DBDF3882A3B463400379E61 /* RedeemStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3872A3B463400379E61 /* RedeemStepModel.swift */; };
+		7DBDF3882A3B463400379E61 /* RedeemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF3872A3B463400379E61 /* RedeemModel.swift */; };
 		7DBDF38F2A3B55B900379E61 /* StepToRedeemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDF38D2A3B55B900379E61 /* StepToRedeemTableViewCell.swift */; };
 		7DBDF3902A3B55B900379E61 /* StepToRedeemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDF38E2A3B55B900379E61 /* StepToRedeemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DA562CB2A3C294A0017F45D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		7D73D4622A3D956C0048DCE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DA562CD2A3C2F8B0017F45D /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		7DA562CE2A3C2F8B0017F45D /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		7DA562D22A3C45790017F45D /* Poppins-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Poppins-1"; sourceTree = "<group>"; };
@@ -60,14 +60,14 @@
 		7DBDF36D2A3B0FD200379E61 /* AmenitiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmenitiesCollectionViewCell.xib; sourceTree = "<group>"; };
 		7DBDF3702A3B163D00379E61 /* ContactsDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		7DBDF3712A3B163D00379E61 /* ContactsDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		7DBDF3742A3B194900379E61 /* ContectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContectsModel.swift; sourceTree = "<group>"; };
+		7DBDF3742A3B194900379E61 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		7DBDF3762A3B1D0000379E61 /* ParkingLotDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotDetailsVC.swift; sourceTree = "<group>"; };
 		7DBDF3782A3B222500379E61 /* Amenities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenities.swift; sourceTree = "<group>"; };
 		7DBDF37B2A3B274B00379E61 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
 		7DBDF3832A3B459600379E61 /* TermsAndConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionTableViewCell.swift; sourceTree = "<group>"; };
 		7DBDF3842A3B459600379E61 /* TermsAndConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionTableViewCell.xib; sourceTree = "<group>"; };
-		7DBDF3872A3B463400379E61 /* RedeemStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemStepModel.swift; sourceTree = "<group>"; };
+		7DBDF3872A3B463400379E61 /* RedeemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemModel.swift; sourceTree = "<group>"; };
 		7DBDF38D2A3B55B900379E61 /* StepToRedeemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepToRedeemTableViewCell.swift; sourceTree = "<group>"; };
 		7DBDF38E2A3B55B900379E61 /* StepToRedeemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepToRedeemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,10 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D73D4612A3D95530048DCE7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7D73D4622A3D956C0048DCE7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		7DA562CA2A3C29320017F45D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7DA562CB2A3C294A0017F45D /* NavigationController.swift */,
 				7DBDF37D2A3B40A400379E61 /* SegmentedController.swift */,
 			);
 			path = Extensions;
@@ -119,6 +126,7 @@
 		7DBDF33B2A3AF62700379E61 /* KtScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7D73D4612A3D95530048DCE7 /* Constants */,
 				7DA562D12A3C456B0017F45D /* Fonts */,
 				7DA562CA2A3C29320017F45D /* Extensions */,
 				7DBDF37A2A3B273400379E61 /* Enum */,
@@ -184,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				7DBDF3642A3B00C600379E61 /* AssignedParkingLotModel.swift */,
-				7DBDF3742A3B194900379E61 /* ContectsModel.swift */,
+				7DBDF3742A3B194900379E61 /* ContactModel.swift */,
 				7DBDF3782A3B222500379E61 /* Amenities.swift */,
-				7DBDF3872A3B463400379E61 /* RedeemStepModel.swift */,
+				7DBDF3872A3B463400379E61 /* RedeemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,7 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBDF3722A3B163D00379E61 /* ContactsDetailsTableViewCell.swift in Sources */,
-				7DBDF3882A3B463400379E61 /* RedeemStepModel.swift in Sources */,
+				7D73D4632A3D956C0048DCE7 /* Constants.swift in Sources */,
+				7DBDF3882A3B463400379E61 /* RedeemModel.swift in Sources */,
 				7DBDF37C2A3B274B00379E61 /* Sections.swift in Sources */,
 				7DBDF3692A3B04B400379E61 /* HeaderViewTableViewCell.swift in Sources */,
 				7DBDF38F2A3B55B900379E61 /* StepToRedeemTableViewCell.swift in Sources */,
@@ -298,12 +307,11 @@
 				7DBDF33D2A3AF62700379E61 /* AppDelegate.swift in Sources */,
 				7DBDF3772A3B1D0000379E61 /* ParkingLotDetailsVC.swift in Sources */,
 				7DBDF3652A3B00C600379E61 /* AssignedParkingLotModel.swift in Sources */,
-				7DA562CC2A3C294A0017F45D /* NavigationController.swift in Sources */,
 				7DBDF37E2A3B40A400379E61 /* SegmentedController.swift in Sources */,
 				7DBDF36E2A3B0FD200379E61 /* AmenitiesCollectionViewCell.swift in Sources */,
 				7DA562CF2A3C2F8B0017F45D /* SectionHeaderCell.swift in Sources */,
 				7DBDF3792A3B222500379E61 /* Amenities.swift in Sources */,
-				7DBDF3752A3B194900379E61 /* ContectsModel.swift in Sources */,
+				7DBDF3752A3B194900379E61 /* ContactModel.swift in Sources */,
 				7DBDF33F2A3AF62700379E61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

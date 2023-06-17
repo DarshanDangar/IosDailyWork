@@ -80,7 +80,6 @@
                 <outlet property="imgPerson" destination="ehV-Pg-elV" id="5Tb-q2-v5f"/>
                 <outlet property="lblPersonName" destination="CV4-Yw-P0u" id="oBT-TF-sLG"/>
                 <outlet property="lblPhoneNo" destination="8df-im-shp" id="jwi-jN-Fam"/>
-                <outlet property="topCon" destination="RtV-Io-mev" id="lgR-QT-Ryi"/>
             </connections>
             <point key="canvasLocation" x="-44" y="-42"/>
         </tableViewCell>

@@ -45,8 +45,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="njq-9m-PwE"/>
                     <connections>
-                        <outlet property="assignedParkingLotTableView" destination="Mi0-tg-m0o" id="OGW-R3-GWB"/>
                         <outlet property="btnMessage" destination="ov6-c2-XUo" id="g7r-Hb-0H8"/>
+                        <outlet property="tblAssignedParkingLot" destination="Mi0-tg-m0o" id="OGW-R3-GWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M6p-dg-96r">
-                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -70,7 +70,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="M6p-dg-96r" firstAttribute="top" secondItem="saU-on-8TY" secondAttribute="top" id="B2y-9V-UBr"/>
-                            <constraint firstItem="saU-on-8TY" firstAttribute="bottom" secondItem="M6p-dg-96r" secondAttribute="bottom" id="BBR-NE-FP1"/>
+                            <constraint firstAttribute="bottom" secondItem="M6p-dg-96r" secondAttribute="bottom" id="BBR-NE-FP1"/>
                             <constraint firstItem="saU-on-8TY" firstAttribute="trailing" secondItem="M6p-dg-96r" secondAttribute="trailing" constant="16" id="a4o-G9-YMr"/>
                             <constraint firstItem="M6p-dg-96r" firstAttribute="leading" secondItem="saU-on-8TY" secondAttribute="leading" constant="16" id="g8S-dp-htp"/>
                         </constraints>
@@ -91,8 +91,26 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dpg-Hr-b1v">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <navigationBarAppearance key="standardAppearance">
                             <color key="backgroundColor" name="navigationBarBG"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <barButtonItemAppearance key="buttonAppearance">
+                                <barButtonItemStateAppearance key="normal"/>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" name="navigationBarBG"/>

@@ -13,6 +13,7 @@ class StepToRedeemTableViewCell: UITableViewCell {
     @IBOutlet weak var imgStepNo: UIImageView!
     @IBOutlet weak var lblStepDescription: UILabel!
     @IBOutlet weak var imgDiscription: UIImageView!
+    @IBOutlet weak var topConstraintOfStackView: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +21,7 @@ class StepToRedeemTableViewCell: UITableViewCell {
     }
 
     // MARK: config Cell
-    func configCell(data: RedeemStepCountModel) {
+    func configCell(data: RedeemDetails) {
         imgStepNo.image = UIImage(named: data.imgStepNo)
         lblStepDescription.text = data.stepDescription
         imgDiscription.image = UIImage(named: data.imgDescription)

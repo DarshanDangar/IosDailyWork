@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="33f-vy-ajP">
-                        <rect key="frame" x="0.0" y="18" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="14" width="320" height="30"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EWp-X1-JKl">
                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-El-f9Q">
-                                <rect key="frame" x="285" y="0.0" width="35" height="50"/>
+                                <rect key="frame" x="285" y="0.0" width="35" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="QoZ-q0-VNA"/>
                                     <constraint firstAttribute="height" constant="30" id="RJ0-n3-mn5"/>
@@ -49,9 +49,9 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="33f-vy-ajP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Iy5-fk-cmD"/>
+                    <constraint firstItem="33f-vy-ajP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Iy5-fk-cmD"/>
                     <constraint firstAttribute="trailing" secondItem="33f-vy-ajP" secondAttribute="trailing" id="ZNb-VE-pyo"/>
-                    <constraint firstAttribute="bottom" secondItem="33f-vy-ajP" secondAttribute="bottom" constant="18" id="dHe-kJ-xgl"/>
+                    <constraint firstAttribute="bottom" secondItem="33f-vy-ajP" secondAttribute="bottom" id="dHe-kJ-xgl"/>
                     <constraint firstItem="33f-vy-ajP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ygS-NU-ybZ"/>
                 </constraints>
             </tableViewCellContentView>
@@ -60,6 +60,7 @@
                 <outlet property="imgDiscription" destination="4Gh-El-f9Q" id="Uoi-sO-OFT"/>
                 <outlet property="imgStepNo" destination="EWp-X1-JKl" id="8uG-AS-yOz"/>
                 <outlet property="lblStepDescription" destination="Yeq-Aw-W9e" id="ls6-wQ-Tdp"/>
+                <outlet property="topConstraintOfStackView" destination="Iy5-fk-cmD" id="OaV-tL-BU1"/>
             </connections>
             <point key="canvasLocation" x="-383" y="-53"/>
         </tableViewCell>
