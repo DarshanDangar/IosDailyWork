@@ -17,7 +17,7 @@ class AssignedParkingLotTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imgParkingLot.layer.cornerRadius = 6
     }
     
     // MARK: config Cell

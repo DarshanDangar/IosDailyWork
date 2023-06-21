@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderViewTableViewCell: UITableViewCell {
+class HeaderViewTableViewCell: UITableViewHeaderFooterView {
     
     // MARK: Outlets
     @IBOutlet weak var imgParkingLot: UIImageView!
@@ -17,10 +17,10 @@ class HeaderViewTableViewCell: UITableViewCell {
     @IBOutlet weak var lblLocationPhoneNo: UILabel!
     @IBOutlet weak var amentiesCollectionView: UICollectionView!
     @IBOutlet weak var segmentController: UISegmentedControl!
+    @IBOutlet weak var clVHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         initialSetUp()
     }
     

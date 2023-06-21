@@ -60,6 +60,7 @@
                 <outlet property="imgDiscription" destination="4Gh-El-f9Q" id="Uoi-sO-OFT"/>
                 <outlet property="imgStepNo" destination="EWp-X1-JKl" id="8uG-AS-yOz"/>
                 <outlet property="lblStepDescription" destination="Yeq-Aw-W9e" id="ls6-wQ-Tdp"/>
+                <outlet property="stackView" destination="33f-vy-ajP" id="edH-rq-GQp"/>
                 <outlet property="topConstraintOfStackView" destination="Iy5-fk-cmD" id="OaV-tL-BU1"/>
             </connections>
             <point key="canvasLocation" x="-383" y="-53"/>

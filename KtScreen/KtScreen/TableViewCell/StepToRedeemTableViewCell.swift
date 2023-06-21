@@ -14,6 +14,7 @@ class StepToRedeemTableViewCell: UITableViewCell {
     @IBOutlet weak var lblStepDescription: UILabel!
     @IBOutlet weak var imgDiscription: UIImageView!
     @IBOutlet weak var topConstraintOfStackView: NSLayoutConstraint!
+    @IBOutlet weak var stackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

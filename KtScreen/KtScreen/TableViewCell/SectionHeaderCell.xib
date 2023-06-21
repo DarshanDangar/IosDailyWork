@@ -38,6 +38,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="lblHeaderTitle" destination="YBo-O6-n0m" id="4c3-EU-1hy"/>
+                <outlet property="topConstraintsofHeaderName" destination="NZh-xA-n35" id="xaS-pZ-uD3"/>
             </connections>
             <point key="canvasLocation" x="-20" y="-11"/>
         </tableViewCell>

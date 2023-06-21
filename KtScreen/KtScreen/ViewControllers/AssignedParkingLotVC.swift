@@ -20,12 +20,10 @@ class AssignedParkingLotVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.setRightBarButton(UIBarButtonItem(image: UIImage(named: Constants.Image.notification), style: .plain, target: storyboard, action: nil), animated: true)
         navigationController?.navigationBar.topItem?.setLeftBarButton(UIBarButtonItem(image: UIImage(named: Constants.Image.hamBurger), style: .plain, target: storyboard, action: nil), animated: true)
         title = Constants.NavigationTitle.assignedParkingLot
         navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         navigationController?.navigationBar.topItem?.titleView?.tintColor = .white
     }
     
@@ -63,7 +61,7 @@ extension AssignedParkingLotVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: Constants.ViewControllerList.parkingLotDetailsVC) as? ParkingLotDetailsVC else {return}
-        vc.currentIndex = indexPath.row
+        vc.currentId = AssignedParkingLotModel.parkingLotList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
     

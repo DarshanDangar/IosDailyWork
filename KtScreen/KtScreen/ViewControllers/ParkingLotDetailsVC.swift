@@ -10,32 +10,52 @@ import UIKit
 class ParkingLotDetailsVC: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var detailsOfParkingLotTableView: UITableView!
+    @IBOutlet weak private var detailsOfParkingLotTableView: UITableView!
     
     // MARK: Variables
-    var currentIndex = 0
+    var currentId: AssignedParkingLotModel?
     
-     // MARK: View LifeCycle
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = ""
-//        navigationController?.navigationBar.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        super.viewWillAppear(animated)
         navigationItem.title = Constants.NavigationTitle.parkingLotDetails
     }
     
-    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+//        guard let headerView = detailsOfParkingLotTableView.tableHeaderView else {
+//            return
+//        }
+//        let size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+//
+//        if headerView.frame.size.height != size.height {
+//            headerView.frame.size.height = size.height
+//            detailsOfParkingLotTableView.tableHeaderView = headerView
+//            detailsOfParkingLotTableView.layoutIfNeeded()
+//        }
+//    }
+
     
     // MARK: iniitialSetUp
     private func initialSetUp() {
         detailsOfParkingLotTableView.delegate = self
         detailsOfParkingLotTableView.dataSource = self
         detailsOfParkingLotTableView.estimatedRowHeight = 120
-        detailsOfParkingLotTableView.sectionHeaderTopPadding = 5
+        detailsOfParkingLotTableView.sectionHeaderTopPadding = 0
+        navigationItem.setLeftBarButton(UIBarButtonItem(image: UIImage(named: "btnBack"), style: .plain, target: self, action: #selector(self.onTapBack)), animated: true)
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         registerCell()
+    }
+    
+    // MARK: Action Back Button
+    @objc private func onTapBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: register cell
@@ -46,8 +66,13 @@ class ParkingLotDetailsVC: UIViewController {
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.stepToRedeemTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.stepToRedeemTableViewCell)
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.termsAndConditionTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.termsAndConditionTableViewCell)
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.sectionHeaderCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.sectionHeaderCell)
-        let header =  UINib(nibName: Constants.Cell.headerViewTableViewCell, bundle: nil).instantiate(withOwner: nil).first as? HeaderViewTableViewCell
-        header?.configCell(data: AssignedParkingLotModel.parkingLotList[currentIndex])
+        let header = UINib(nibName: Constants.Cell.headerViewTableViewCell, bundle: nil).instantiate(withOwner: nil).first as? HeaderViewTableViewCell
+        let dataOfCurrentIndex = AssignedParkingLotModel.parkingLotList.first
+//        {
+//            $0.parkingId == self.currentId
+//        }
+//        header?.configCell(data: dataOfCurrentIndex ?? AssignedParkingLotModel.parkingLotList[0])
+        header?.configCell(data: currentId!)
         detailsOfParkingLotTableView.tableHeaderView = header
     }
     
@@ -62,7 +87,7 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:
+        case .zero:
                 return ContectsModel.arrContactDetails.count
         case 1:
             return ContectsModel.superViserDetails.count
@@ -80,9 +105,10 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.sectionHeaderCell) as? SectionHeaderCell else {return UIView()}
         switch section {
-        case 0:
+        case .zero:
             return nil
         case 1:
+            view.topConstraintsofHeaderName.constant = 20
             view.configCell(data: Sections.SuperVisiorDetails.rawValue)
             return view
         case 2:
@@ -93,6 +119,7 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
             return view
         case 4:
             view.configCell(data: Sections.TermsConditions.rawValue)
+            view.topConstraintsofHeaderName.constant = 15
             return view
         default:
             return UIView()
@@ -101,7 +128,7 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case 0:
+        case .zero:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.contactsDetailsTableViewCell, for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
                 let dataForParticularIndex = ContectsModel.arrContactDetails[indexPath.row]
                 cell.configCell(data: dataForParticularIndex)
@@ -121,12 +148,13 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.stepToRedeemTableViewCell, for: indexPath) as? StepToRedeemTableViewCell else {return UITableViewCell()}
             switch indexPath.row {
-            case 0:
+            case .zero:
                 cell.topConstraintOfStackView.constant = 14
             case 1:
                 cell.topConstraintOfStackView.constant = 18
             case 2:
                 cell.topConstraintOfStackView.constant = 11
+                cell.stackView.alignment = .center
             default:
                 break
             }
@@ -144,8 +172,6 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
     
 }
 
-
-
 // MARK: UITableView Delegates
 extension ParkingLotDetailsVC: UITableViewDelegate {
     
@@ -162,4 +188,3 @@ extension ParkingLotDetailsVC: UITableViewDelegate {
     }
     
 }
-
