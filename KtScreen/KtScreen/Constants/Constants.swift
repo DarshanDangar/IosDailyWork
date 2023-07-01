@@ -42,7 +42,7 @@ struct Constants {
         static let oval4 = "Oval4"
         static let oval5 = "Oval5"
         static let oval6 = "Oval6"
-        static let forwardbtn = "forwardbtn"
+        static let btnforward = "forwardbtn"
         static let hamBurger = "hamBurger"
         static let message = "Message"
         static let notification = "notification"
@@ -55,6 +55,7 @@ struct Constants {
         static let step1 = "step1"
         static let step2 = "step2"
         static let step3 = "step3"
+        static let btnBack = "btnBack"
     }
     
     struct ViewControllerList {
@@ -65,6 +66,10 @@ struct Constants {
     struct NavigationTitle {
         static let parkingLotDetails = "Parking Lot Details"
         static let assignedParkingLot = "Assigned Parking Lot"
+    }
+    
+    struct String {
+        static let emptyString = ""
     }
     
 }

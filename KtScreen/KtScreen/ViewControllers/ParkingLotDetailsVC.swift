@@ -48,7 +48,7 @@ class ParkingLotDetailsVC: UIViewController {
         detailsOfParkingLotTableView.dataSource = self
         detailsOfParkingLotTableView.estimatedRowHeight = 120
         detailsOfParkingLotTableView.sectionHeaderTopPadding = 0
-        navigationItem.setLeftBarButton(UIBarButtonItem(image: UIImage(named: "btnBack"), style: .plain, target: self, action: #selector(self.onTapBack)), animated: true)
+        navigationItem.setLeftBarButton(UIBarButtonItem(image: UIImage(named: Constants.Image.btnBack), style: .plain, target: self, action: #selector(self.onTapBack)), animated: true)
         navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         registerCell()
     }
@@ -68,11 +68,7 @@ class ParkingLotDetailsVC: UIViewController {
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.sectionHeaderCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.sectionHeaderCell)
         let header = UINib(nibName: Constants.Cell.headerViewTableViewCell, bundle: nil).instantiate(withOwner: nil).first as? HeaderViewTableViewCell
         let dataOfCurrentIndex = AssignedParkingLotModel.parkingLotList.first
-//        {
-//            $0.parkingId == self.currentId
-//        }
-//        header?.configCell(data: dataOfCurrentIndex ?? AssignedParkingLotModel.parkingLotList[0])
-        header?.configCell(data: currentId!)
+        header?.configCell(data: currentId ??  AssignedParkingLotModel(imgParkingLot: Constants.String.emptyString, parkingId: Constants.String.emptyString, parkingLotName: Constants.String.emptyString, parkingLotAddress: Constants.String.emptyString, oeratingHour: Constants.String.emptyString, locationId: Constants.String.emptyString, locationPhoneNo: Constants.String.emptyString))
         detailsOfParkingLotTableView.tableHeaderView = header
     }
     
