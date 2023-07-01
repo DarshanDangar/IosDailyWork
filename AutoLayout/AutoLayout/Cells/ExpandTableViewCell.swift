@@ -22,16 +22,16 @@ class ExpandTableViewCell: UITableViewCell {
     }
     
 //    // MARK: config Cell
-    func configcell(data: Articl?) {
-        lblCompanyname.text = data
-        lblSince.text = data.since
-        lblDiscription.text = data.description
-        isTaped = data.isTaped
-        if isTaped {
-            lblDiscription.numberOfLines = 0
-        } else {
-            lblDiscription.numberOfLines = 1
-        }
+    func configcell(data: Article?) {
+        lblCompanyname.text = data?.title
+        lblSince.text = data?.author
+        lblDiscription.text = data?.description
+//        isTaped = ((data?.isTaped) != nil)
+//        if isTaped {
+//            lblDiscription.numberOfLines = 0
+//        } else {
+//            lblDiscription.numberOfLines = 1
+//        }
     }
     
 }

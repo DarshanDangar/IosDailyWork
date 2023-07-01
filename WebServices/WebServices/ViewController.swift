@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var tblNews: UITableView!
-    private let listOfNews: [Article]?
+    var listOfNews:[Article]?
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -40,7 +40,12 @@ class ViewController: UIViewController {
             
             do {
                 let json = try! JSONDecoder().decode(News.self, from: responseData)
-                print("Json: \(json.articles)")
+                if let articles = json.articles {
+                    self.listOfNews = articles
+                }
+                DispatchQueue.main.async {
+                    self.tblNews.reloadData()
+                }
             } catch let error{
                 print("error: \(error.localizedDescription)")
             }
@@ -53,7 +58,8 @@ class ViewController: UIViewController {
 // MARK: UITableView DataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listOfNews.count
+        listOfNews?.count ?? 0
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,12 +67,13 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
             
         }
-        cell.configcell(data: listOfNews[indexPath.row])
+        cell.configcell(data: listOfNews?[indexPath.row])
         return cell
     }
     
 }
 
 // MARK: UITableView Delegates
-extension ViewController: UITableViewDelegate {}
+extension ViewController: UITableViewDelegate {
+}
 
