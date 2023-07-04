@@ -16,6 +16,8 @@
 		7D5493B32A50462100662F12 /* ExpandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5493B22A50462100662F12 /* ExpandTableViewCell.swift */; };
 		7D5493B52A50464300662F12 /* ExpandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5493B42A50464300662F12 /* ExpandTableViewCell.xib */; };
 		7D5493B92A5051D300662F12 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5493B82A5051D300662F12 /* NewsModel.swift */; };
+		7DA01AA92A53D6D3003DD46E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA01AA82A53D6D3003DD46E /* Login.swift */; };
+		7DECFEF82A52CF44004523F4 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DECFEF72A52CF44004523F4 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7D5493B22A50462100662F12 /* ExpandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandTableViewCell.swift; path = ../../AutoLayout/AutoLayout/Cells/ExpandTableViewCell.swift; sourceTree = "<group>"; };
 		7D5493B42A50464300662F12 /* ExpandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpandTableViewCell.xib; path = ../../AutoLayout/AutoLayout/Cells/ExpandTableViewCell.xib; sourceTree = "<group>"; };
 		7D5493B82A5051D300662F12 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		7DA01AA82A53D6D3003DD46E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		7DECFEF72A52CF44004523F4 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		7D54938D2A4FE07900662F12 = {
 			isa = PBXGroup;
 			children = (
+				7DECFEF62A52CF27004523F4 /* Helper */,
 				7D5493AD2A5043F400662F12 /* TblCell */,
 				7D5493982A4FE07900662F12 /* WebServices */,
 				7D5493972A4FE07900662F12 /* Products */,
@@ -66,6 +71,7 @@
 				7D5493992A4FE07900662F12 /* AppDelegate.swift */,
 				7D54939B2A4FE07900662F12 /* SceneDelegate.swift */,
 				7D54939D2A4FE07900662F12 /* ViewController.swift */,
+				7DA01AA82A53D6D3003DD46E /* Login.swift */,
 				7D5493B82A5051D300662F12 /* NewsModel.swift */,
 				7D54939F2A4FE07900662F12 /* Main.storyboard */,
 				7D5493A22A4FE07B00662F12 /* Assets.xcassets */,
@@ -82,6 +88,14 @@
 				7D5493B22A50462100662F12 /* ExpandTableViewCell.swift */,
 			);
 			path = TblCell;
+			sourceTree = "<group>";
+		};
+		7DECFEF62A52CF27004523F4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7DECFEF72A52CF44004523F4 /* WebService.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA01AA92A53D6D3003DD46E /* Login.swift in Sources */,
+				7DECFEF82A52CF44004523F4 /* WebService.swift in Sources */,
 				7D5493B32A50462100662F12 /* ExpandTableViewCell.swift in Sources */,
 				7D54939E2A4FE07900662F12 /* ViewController.swift in Sources */,
 				7D54939A2A4FE07900662F12 /* AppDelegate.swift in Sources */,

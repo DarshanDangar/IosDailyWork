@@ -32,17 +32,11 @@ struct Source: Codable {
 
 // MARK: - Encode/decode helpers
 
-class JSONNull: Codable, Hashable {
+class JSONNull: Codable{
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
 
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
