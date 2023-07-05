@@ -21,17 +21,17 @@ class ExpandTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-//    // MARK: config Cell
+    //    // MARK: config Cell
     func configcell(data: Article?) {
         lblCompanyname.text = data?.title
         lblSince.text = data?.author
         lblDiscription.text = data?.description
-//        isTaped = ((data?.isTaped) != nil)
-//        if isTaped {
-//            lblDiscription.numberOfLines = 0
-//        } else {
-//            lblDiscription.numberOfLines = 1
-//        }
+        //        isTaped = ((data?.isTaped) != nil)
+        //        if isTaped {
+        //            lblDiscription.numberOfLines = 0
+        //        } else {
+        //            lblDiscription.numberOfLines = 1
+        //        }
     }
     
 }

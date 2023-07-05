@@ -12,12 +12,13 @@ class WebService {
     
     static var shared = WebService()
     
-    func getUrl<T: Codable>(url: URL, type: String, parameter: Codable? = nil,completion: @escaping (Result<T, Error>) -> Void) {
+    func getUrl<T: Codable>(url: URL, type: RequestType, parameter: Codable? = nil,completion: @escaping (Result<T, Error>) -> Void) {
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = type
+        urlRequest.httpMethod = type.rawValue
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if urlRequest.httpMethod == "POST" {
+        
+        if urlRequest.httpMethod == RequestType.get.rawValue {
             if let parameter = parameter {
                 do {
                     urlRequest.httpBody = try JSONEncoder().encode(parameter)
@@ -48,4 +49,9 @@ class WebService {
         dataTask.resume()
     }
     
+}
+
+enum RequestType: String {
+    case get = "GET"
+    case post = "POST"
 }
