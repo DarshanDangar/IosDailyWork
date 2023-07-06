@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
     // MARK: Variables
     let loginVM = LoginVM()
     let alert = UIAlertController(title: "Sucessfully", message: "Login SucessFully", preferredStyle: .alert)
+    var coordinator: LoginCoordinator?
     
      // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -24,13 +25,16 @@ class LoginVC: UIViewController {
     }
     
     func bindViewModel() {
-        
+//        loginVM.onApiError.bind({
+//
+//        })
     }
     
     // MARK: IbActions
     @IBAction func btnLogIn(_ sender: Any) {
-        loginVM.validation(email: tfEmail.text ?? "", password: tfPassword.text ?? "") {
+        loginVM.validation(email: tfEmail.text ?? Constants.emptyString, password: tfPassword.text ?? Constants.emptyString) {
             print("Sucessfully Login")
+            self.coordinator?.gotoNewsCoordinator()
             self.present(self.alert, animated: true)
         }
     }

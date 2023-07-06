@@ -33,16 +33,14 @@ class ImageUploadDownloadVC: UIViewController {
         self.present(phPickerVc, animated: true)
     }
     
-    
     @IBAction func btnDownload(_ sender: Any) {
-        guard let url = URL(string: tfUrl.text ?? "") else {return}
+        guard let url = URL(string: tfUrl.text ?? Constants.emptyString) else {return}
         imageVM.downLoadaImage(url: url) { image in
-            self.tfUrl.text = ""
+            self.tfUrl.text = Constants.emptyString
             self.imgDownload.image = image
-            self.bindViewModel()
+//            self.bindViewModel()
         }
     }
-    
     
     func bindViewModel() {
         imageVM.onApiError = { error in

@@ -10,12 +10,14 @@ import UIKit
 import Alamofire
 
 class LoginVM: NSObject {
-    var onApiError:((String) -> Void)?
+    
+//    var onApiError:((String) -> Void)?
+    var onApiError = Dynamic<String?>("")
     
     func validation(email: String = "", password: String = "", compliition: @escaping() -> ()) {
         if !email.isEmpty && !password.isEmpty {
-            var user = SignIn(email: email, password: password)
-            var parameter = [
+            let user = SignIn(email: email, password: password)
+            let parameter = [
                 "email": user.email,
                 "password": user.password
             ]
@@ -24,6 +26,7 @@ class LoginVM: NSObject {
                 case .success(let data):
                     print(data)
                     compliition()
+                    self.onApiError.value = ""
                 case .failure(let error):
                     print(error)
                 }

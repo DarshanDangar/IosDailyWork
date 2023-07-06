@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var tblNews: UITableView!
     var listOfNews:[Article]?
+    var coordinator: LoginCoordinator?
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tblNews.delegate = self
         tblNews.dataSource = self
-        tblNews.register(UINib(nibName: "ExpandTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpandTableViewCell")
+        tblNews.register(UINib(nibName: Constants.TbblCell.expandTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.TbblCell.expandTableViewCell)
         getDataFromServer()
     }
     
@@ -63,7 +64,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpandTableViewCell", for: indexPath) as? ExpandTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TbblCell.expandTableViewCell, for: indexPath) as? ExpandTableViewCell else {
             return UITableViewCell()
         }
         cell.configcell(data: listOfNews?[indexPath.row])
