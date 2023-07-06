@@ -15,10 +15,12 @@ class LoginVC: UIViewController {
     
     // MARK: Variables
     let loginVM = LoginVM()
+    let alert = UIAlertController(title: "Sucessfully", message: "Login SucessFully", preferredStyle: .alert)
     
      // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
     }
     
     func bindViewModel() {
@@ -27,7 +29,10 @@ class LoginVC: UIViewController {
     
     // MARK: IbActions
     @IBAction func btnLogIn(_ sender: Any) {
-        
+        loginVM.validation(email: tfEmail.text ?? "", password: tfPassword.text ?? "") {
+            print("Sucessfully Login")
+            self.present(self.alert, animated: true)
+        }
     }
     
 }

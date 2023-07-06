@@ -16,12 +16,14 @@
 		7D5493A32A4FE07B00662F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5493A22A4FE07B00662F12 /* Assets.xcassets */; };
 		7D5493A62A4FE07B00662F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5493A42A4FE07B00662F12 /* LaunchScreen.storyboard */; };
 		7D5493B92A5051D300662F12 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5493B82A5051D300662F12 /* NewsModel.swift */; };
+		7D9565F12A56B61600AB854C /* Coordiinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9565F02A56B61600AB854C /* Coordiinator.swift */; };
 		7D99FDFD2A55268700FC6ACE /* ImageUploadDownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99FDFC2A55268700FC6ACE /* ImageUploadDownloadVC.swift */; };
 		7D99FE002A552EE900FC6ACE /* ExpandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99FDFE2A552EE900FC6ACE /* ExpandTableViewCell.swift */; };
 		7D99FE012A552EE900FC6ACE /* ExpandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D99FDFF2A552EE900FC6ACE /* ExpandTableViewCell.xib */; };
 		7D99FE032A5530AB00FC6ACE /* UploadDownloadVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99FE022A5530AB00FC6ACE /* UploadDownloadVM.swift */; };
 		7D99FE052A5537CF00FC6ACE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99FE042A5537CF00FC6ACE /* Image.swift */; };
 		7DA01AA92A53D6D3003DD46E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA01AA82A53D6D3003DD46E /* Login.swift */; };
+		7DA880A82A568DCA00CCB220 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA880A72A568DCA00CCB220 /* SignIn.swift */; };
 		7DECFEF82A52CF44004523F4 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DECFEF72A52CF44004523F4 /* WebService.swift */; };
 		8AFCCA002557EEC8F9C1E02F /* Pods_WebServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDFB7A54E4B0449D258EA1A /* Pods_WebServices.framework */; };
 /* End PBXBuildFile section */
@@ -39,12 +41,14 @@
 		7D5493A52A4FE07B00662F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D5493A72A4FE07B00662F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5493B82A5051D300662F12 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		7D9565F02A56B61600AB854C /* Coordiinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordiinator.swift; sourceTree = "<group>"; };
 		7D99FDFC2A55268700FC6ACE /* ImageUploadDownloadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadDownloadVC.swift; sourceTree = "<group>"; };
 		7D99FDFE2A552EE900FC6ACE /* ExpandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandTableViewCell.swift; path = ../../../AutoLayout/AutoLayout/Cells/ExpandTableViewCell.swift; sourceTree = "<group>"; };
 		7D99FDFF2A552EE900FC6ACE /* ExpandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpandTableViewCell.xib; path = ../../../AutoLayout/AutoLayout/Cells/ExpandTableViewCell.xib; sourceTree = "<group>"; };
 		7D99FE022A5530AB00FC6ACE /* UploadDownloadVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDownloadVM.swift; sourceTree = "<group>"; };
 		7D99FE042A5537CF00FC6ACE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		7DA01AA82A53D6D3003DD46E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		7DA880A72A568DCA00CCB220 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		7DECFEF72A52CF44004523F4 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		ADDFB7A54E4B0449D258EA1A /* Pods_WebServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FDDEF74DD2E07477C8D90E /* Pods-WebServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServices.debug.xcconfig"; path = "Target Support Files/Pods-WebServices/Pods-WebServices.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		7D1B6BAA2A55CA2F00CA51FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DA880A72A568DCA00CCB220 /* SignIn.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		7D5493982A4FE07900662F12 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				7D9565EF2A56B60700AB854C /* Coordinator */,
 				7D1B6BA72A55C9CB00CA51FC /* EmailModule */,
 				7D99FDF62A551DF700FC6ACE /* ImageModule */,
 				7D99FDF52A551DDB00FC6ACE /* StoryBoard */,
@@ -145,6 +151,14 @@
 				7D99FDFF2A552EE900FC6ACE /* ExpandTableViewCell.xib */,
 			);
 			path = TblCell;
+			sourceTree = "<group>";
+		};
+		7D9565EF2A56B60700AB854C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7D9565F02A56B61600AB854C /* Coordiinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		7D99FDF22A551D6100FC6ACE /* AppDelegate */ = {
@@ -351,12 +365,14 @@
 			files = (
 				7D1B6BAC2A55CAA300CA51FC /* LoginVC.swift in Sources */,
 				7DA01AA92A53D6D3003DD46E /* Login.swift in Sources */,
+				7DA880A82A568DCA00CCB220 /* SignIn.swift in Sources */,
 				7D99FE032A5530AB00FC6ACE /* UploadDownloadVM.swift in Sources */,
 				7DECFEF82A52CF44004523F4 /* WebService.swift in Sources */,
 				7D54939E2A4FE07900662F12 /* ViewController.swift in Sources */,
 				7D54939A2A4FE07900662F12 /* AppDelegate.swift in Sources */,
 				7D54939C2A4FE07900662F12 /* SceneDelegate.swift in Sources */,
 				7D5493B92A5051D300662F12 /* NewsModel.swift in Sources */,
+				7D9565F12A56B61600AB854C /* Coordiinator.swift in Sources */,
 				7D1B6BAE2A55CB6900CA51FC /* LoginVM.swift in Sources */,
 				7D99FDFD2A55268700FC6ACE /* ImageUploadDownloadVC.swift in Sources */,
 				7D99FE002A552EE900FC6ACE /* ExpandTableViewCell.swift in Sources */,
