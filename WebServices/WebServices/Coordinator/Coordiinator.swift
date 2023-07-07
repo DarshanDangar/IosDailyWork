@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
+@objc protocol Coordinator {
     
     var navigationController: UINavigationController {get set}
+    @objc optional func popVc()
     
 }
 

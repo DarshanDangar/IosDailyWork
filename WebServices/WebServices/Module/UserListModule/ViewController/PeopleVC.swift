@@ -14,6 +14,7 @@ class PeopleVC: UIViewController {
     
     // MARK: Variables
     private var listOfPeople: [Datum] = []
+    let peopleVm  = PeoopleVm()
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -21,14 +22,21 @@ class PeopleVC: UIViewController {
         initialSetup()
     }
     
+    // MARK: Private Method
     private func initialSetup() {
         tblPeople.delegate = self
         tblPeople.dataSource = self
-        let vm  = PeoopleVm()
-//        vm.onApiSucess.bind({ datum in
-//            listOfPeople = datum
-//        })
-        tblPeople.register(UINib(nibName: Constants.TbblCell.tblCellUserList, bundle: nil), forCellReuseIdentifier: Constants.TbblCell.tblCellUserList)
+        bindVM()
+        peopleVm.getDatafromServer()
+        tblPeople.register(UINib(nibName: Constants.TblCell.tblCellUserList, bundle: nil), forCellReuseIdentifier: Constants.TblCell.tblCellUserList)
+    }
+    
+    private func bindVM() {
+        peopleVm.userList.bind { user in
+            DispatchQueue.main.async {
+                self.tblPeople.reloadData()
+            }
+        }
     }
 
 }
@@ -41,11 +49,16 @@ extension PeopleVC: UITableViewDelegate {
 // MARK: UITableView DataSource
 extension PeopleVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listOfPeople.count
+        return peopleVm.userList.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TblCell.tblCellUserList, for: indexPath) as? TblCellUserList else {
+            return UITableViewCell()
+        }
+        let dataForParticularIndex = peopleVm.userList.value[indexPath.row]
+        cell.configCell(data: dataForParticularIndex)
+        return cell
     }
     
     

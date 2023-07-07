@@ -473,8 +473,8 @@
             filePath = "WebServices/ImageModule/ViewController/ImageUploadDownloadVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "picker(_:didFinishPicking:)"
             landmarkType = "7">
             <Locations>

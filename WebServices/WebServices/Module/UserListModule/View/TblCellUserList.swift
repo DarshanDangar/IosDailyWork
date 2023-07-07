@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TblCellUserList: UITableViewCell {
     
@@ -19,6 +20,16 @@ class TblCellUserList: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgUser.layer.cornerRadius = imgUser.frame.height / 2
+    }
+    
+    // MARK: config Cell
+    func configCell(data: Datum) {
+        imgUser.kf.setImage(with: URL(string: data.avatar))
+        lblId.text = String(data.id)
+        lblFirstName.text = data.firstName
+        lblLastName.text = data.lastName
+        lblEmail.text = data.email
     }
     
 }

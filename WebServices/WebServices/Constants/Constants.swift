@@ -19,7 +19,7 @@ struct Constants {
         static let peopleVC = "PeopleVC"
     }
     
-    struct TbblCell {
+    struct TblCell {
         static let tblCellUserList = "TblCellUserList"
         static let expandTableViewCell = "ExpandTableViewCell"
     }

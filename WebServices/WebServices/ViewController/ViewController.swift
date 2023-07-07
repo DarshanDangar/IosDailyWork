@@ -17,13 +17,11 @@ class ViewController: UIViewController {
     // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         tblNews.delegate = self
         tblNews.dataSource = self
-        tblNews.register(UINib(nibName: Constants.TbblCell.expandTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.TbblCell.expandTableViewCell)
+        tblNews.register(UINib(nibName: Constants.TblCell.expandTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.TblCell.expandTableViewCell)
         getDataFromServer()
     }
-    
     
     // MARK: Get Data from Server
     private func getDataFromServer() {
@@ -50,6 +48,7 @@ class ViewController: UIViewController {
             } catch let error{
                 print("error: \(error.localizedDescription)")
             }
+        
         }
         dataTask.resume()
     }
@@ -64,7 +63,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TbblCell.expandTableViewCell, for: indexPath) as? ExpandTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TblCell.expandTableViewCell, for: indexPath) as? ExpandTableViewCell else {
             return UITableViewCell()
         }
         cell.configcell(data: listOfNews?[indexPath.row])

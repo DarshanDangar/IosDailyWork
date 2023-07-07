@@ -68,5 +68,11 @@ class Login: UIViewController {
                 print("Error: \(error)")
             }
         }
+        
+//        let urlRequest = URLRequest(url: url)
+//
+//        let json = JSONSerialization.jsonObject(with: user)
+//        let obj = JSONSerialization.data(withJSONObject: json , options: .prettyPrinted)
+//        print(obj)
     }
 }
