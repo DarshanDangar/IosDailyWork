@@ -10,25 +10,24 @@ import UIKit
 import Alamofire
 
 class LoginVM: NSObject {
+
+    var onApiError = Dynamic<Error?>(nil)
+    var onApiSucess = Dynamic<Data?>(nil)
     
-//    var onApiError:((String) -> Void)?
-    var onApiError = Dynamic<String?>("")
-    
-    func validation(email: String = "", password: String = "", compliition: @escaping() -> ()) {
+    func validation(email: String = "", password: String = "") {
         if !email.isEmpty && !password.isEmpty {
             let user = SignIn(email: email, password: password)
             let parameter = [
                 "email": user.email,
                 "password": user.password
             ]
+            
             AF.request("https://reqres.in/api/login", method: .post, parameters: parameter).response { response in
                 switch response.result {
                 case .success(let data):
-                    print(data)
-                    compliition()
-                    self.onApiError.value = ""
+                    self.onApiSucess.value = data
                 case .failure(let error):
-                    print(error)
+                    self.onApiError.value = error
                 }
             }
         }

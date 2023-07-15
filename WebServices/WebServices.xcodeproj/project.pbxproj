@@ -176,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7D0817872A5714C800A682C0 /* Dynamic */,
+				7DECFEF62A52CF27004523F4 /* Helper */,
 				7D0817842A57098500A682C0 /* Constants */,
 				7D9565EF2A56B60700AB854C /* Coordinator */,
 				7D08178A2A57173B00A682C0 /* Module */,
@@ -183,7 +184,6 @@
 				7D99FDF42A551DC900FC6ACE /* Model */,
 				7D99FDF32A551DAA00FC6ACE /* ViewController */,
 				7D5493AD2A5043F400662F12 /* TblCell */,
-				7DECFEF62A52CF27004523F4 /* Helper */,
 				7D99FDF22A551D6100FC6ACE /* AppDelegate */,
 				7D5493A22A4FE07B00662F12 /* Assets.xcassets */,
 				7D5493A72A4FE07B00662F12 /* Info.plist */,
@@ -293,9 +293,9 @@
 		7D99FDF62A551DF700FC6ACE /* ImageModule */ = {
 			isa = PBXGroup;
 			children = (
-				7D99FDF92A55201700FC6ACE /* ViewModel */,
-				7D99FDF82A55200700FC6ACE /* ViewController */,
 				7D99FDF72A551E3900FC6ACE /* Model */,
+				7D99FDF82A55200700FC6ACE /* ViewController */,
+				7D99FDF92A55201700FC6ACE /* ViewModel */,
 			);
 			path = ImageModule;
 			sourceTree = "<group>";

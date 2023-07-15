@@ -43,16 +43,7 @@ class ImageUploadDownloadVC: UIViewController {
     }
     
     func bindViewModel() {
-        imageVM.onApiError = { error in
-            print(error)
-        }
-        imageVM.downloadImage = { image in
-            self.imgDownload.image = image
-            print("Download Sucessfully")
-        }
-        imageVM.uploadImage = {
-            print("Upload Image")
-        }
+        
     }
     
 }

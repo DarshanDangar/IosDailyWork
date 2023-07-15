@@ -17,10 +17,10 @@ class PeoopleVm {
         guard let url = URL(string: "https://reqres.in/api/users?page=2") else {
             return
         }
-        var urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url)
         let dataaTask = URLSession.shared.dataTask(with: urlRequest) { data,response,error in
             guard let data = data else {return}
-            guard let response = response else {return}
+            guard response != nil else {return}
             if let error = error {
                 self.onApiError.value = error
             }

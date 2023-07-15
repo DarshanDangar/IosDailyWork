@@ -25,18 +25,18 @@ class LoginVC: UIViewController {
     }
     
     func bindViewModel() {
-//        loginVM.onApiError.bind({
-//
-//        })
+        loginVM.onApiError.bind({ error in
+            print(error?.localizedDescription ?? "")
+        })
+        loginVM.onApiSucess.bind({ data in
+            self.coordinator?.gotoNewsCoordinator()
+            self.present(self.alert, animated: true)
+        })
     }
     
     // MARK: IbActions
     @IBAction func btnLogIn(_ sender: Any) {
-        loginVM.validation(email: tfEmail.text ?? Constants.emptyString, password: tfPassword.text ?? Constants.emptyString) {
-            print("Sucessfully Login")
-            self.coordinator?.gotoNewsCoordinator()
-            self.present(self.alert, animated: true)
-        }
+        loginVM.validation(email: tfEmail.text ?? Constants.emptyString, password: tfPassword.text ?? Constants.emptyString)
     }
     
 }
