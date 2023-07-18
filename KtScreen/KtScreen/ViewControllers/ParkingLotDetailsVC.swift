@@ -21,26 +21,15 @@ class ParkingLotDetailsVC: UIViewController {
         initialSetUp()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+//        detailsOfParkingLotTableView.layoutTableViewHeaderHeight()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = Constants.NavigationTitle.parkingLotDetails
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        guard let headerView = detailsOfParkingLotTableView.tableHeaderView else {
-//            return
-//        }
-//        let size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-//
-//        if headerView.frame.size.height != size.height {
-//            headerView.frame.size.height = size.height
-//            detailsOfParkingLotTableView.tableHeaderView = headerView
-//            detailsOfParkingLotTableView.layoutIfNeeded()
-//        }
-//    }
-
     
     // MARK: iniitialSetUp
     private func initialSetUp() {
@@ -67,7 +56,7 @@ class ParkingLotDetailsVC: UIViewController {
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.termsAndConditionTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.termsAndConditionTableViewCell)
         detailsOfParkingLotTableView.register(UINib(nibName: Constants.Cell.sectionHeaderCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.sectionHeaderCell)
         let header = UINib(nibName: Constants.Cell.headerViewTableViewCell, bundle: nil).instantiate(withOwner: nil).first as? HeaderViewTableViewCell
-        let dataOfCurrentIndex = AssignedParkingLotModel.parkingLotList.first
+        _ = AssignedParkingLotModel.parkingLotList.first
         header?.configCell(data: currentId ??  AssignedParkingLotModel(imgParkingLot: Constants.String.emptyString, parkingId: Constants.String.emptyString, parkingLotName: Constants.String.emptyString, parkingLotAddress: Constants.String.emptyString, oeratingHour: Constants.String.emptyString, locationId: Constants.String.emptyString, locationPhoneNo: Constants.String.emptyString))
         detailsOfParkingLotTableView.tableHeaderView = header
     }
@@ -76,15 +65,15 @@ class ParkingLotDetailsVC: UIViewController {
 
 // MARK: UITableView DataSource
 extension ParkingLotDetailsVC: UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Sections.allCases.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case .zero:
-                return ContectsModel.arrContactDetails.count
+            return ContectsModel.arrContactDetails.count
         case 1:
             return ContectsModel.superViserDetails.count
         case 2:
@@ -126,9 +115,9 @@ extension ParkingLotDetailsVC: UITableViewDataSource {
         switch indexPath.section {
         case .zero:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.contactsDetailsTableViewCell, for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
-                let dataForParticularIndex = ContectsModel.arrContactDetails[indexPath.row]
-                cell.configCell(data: dataForParticularIndex)
-                return cell
+            let dataForParticularIndex = ContectsModel.arrContactDetails[indexPath.row]
+            cell.configCell(data: dataForParticularIndex)
+            return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.contactsDetailsTableViewCell, for: indexPath) as? ContactsDetailsTableViewCell else {return UITableViewCell()}
             let dataForParticularIndex = ContectsModel.superViserDetails[indexPath.row]
@@ -180,7 +169,7 @@ extension ParkingLotDetailsVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return UITableView.automaticDimension
+        return UITableView.automaticDimension
     }
     
 }

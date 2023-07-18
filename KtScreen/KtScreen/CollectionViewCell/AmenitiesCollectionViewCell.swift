@@ -15,7 +15,6 @@ class AmenitiesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     // MARK: config Cell
@@ -23,5 +22,5 @@ class AmenitiesCollectionViewCell: UICollectionViewCell {
         imgAmenities.image = UIImage(named: data.imgAmenitiesType)
         lblAmenitiesName.text = data.lblNameofAmenities
     }
-
+    
 }

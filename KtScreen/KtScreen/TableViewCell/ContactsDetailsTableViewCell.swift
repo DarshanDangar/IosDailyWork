@@ -17,7 +17,6 @@ class ContactsDetailsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         initialSetUp()
     }
     

@@ -8,10 +8,9 @@
 import UIKit
 
 class TermsAndConditionTableViewCell: UITableViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
 }

@@ -5,7 +5,6 @@
 //  Created by Darshan Dangar on 17/06/23.
 //
 
-import Foundation
 import UIKit
 
 struct Constants {

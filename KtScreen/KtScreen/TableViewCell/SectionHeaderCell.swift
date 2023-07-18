@@ -8,14 +8,13 @@
 import UIKit
 
 class SectionHeaderCell: UITableViewCell {
-
+    
     // MARK: Outlets
     @IBOutlet weak var lblHeaderTitle: UILabel!
     @IBOutlet weak var topConstraintsofHeaderName: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     // MARK: config Cell

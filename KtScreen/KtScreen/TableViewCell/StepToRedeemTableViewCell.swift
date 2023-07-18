@@ -18,9 +18,8 @@ class StepToRedeemTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     // MARK: config Cell
     func configCell(data: RedeemDetails) {
         imgStepNo.image = UIImage(named: data.imgStepNo)

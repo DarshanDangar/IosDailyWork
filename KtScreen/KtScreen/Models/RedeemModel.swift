@@ -5,7 +5,6 @@
 //  Created by Darshan Dangar on 15/06/23.
 //
 
-import Foundation
 import UIKit
 
 struct RedeemDetails {
