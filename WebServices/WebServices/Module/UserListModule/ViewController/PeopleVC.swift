@@ -15,6 +15,8 @@ class PeopleVC: UIViewController {
     // MARK: Variables
     private var listOfPeople: [Datum] = []
     let peopleVm  = PeoopleVm()
+    let refreshControl = UIRefreshControl()
+    var coordinator: ButtonCoordinator?
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -26,9 +28,22 @@ class PeopleVC: UIViewController {
     private func initialSetup() {
         tblPeople.delegate = self
         tblPeople.dataSource = self
+        refreshControld()
         bindVM()
         peopleVm.getDatafromServer()
         tblPeople.register(UINib(nibName: Constants.TblCell.tblCellUserList, bundle: nil), forCellReuseIdentifier: Constants.TblCell.tblCellUserList)
+    }
+    
+    private func refreshControld() {
+        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tblPeople.refreshControl = refreshControl
+    }
+    
+    @objc private func loadData() {
+        peopleVm.currentPage.value = 0
+        peopleVm.getDatafromServer()
+        refreshControl.endRefreshing()
+        peopleVm.userList.value = []
     }
     
     private func bindVM() {
@@ -43,6 +58,12 @@ class PeopleVC: UIViewController {
 
 // MARK: UITableView Delegates
 extension PeopleVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == peopleVm.userList.value.count - 1, peopleVm.currentPage.value < peopleVm.totalPage.value {
+            peopleVm.getDatafromServer()
+        }
+    }
     
 }
 
@@ -60,7 +81,6 @@ extension PeopleVC: UITableViewDataSource {
         cell.configCell(data: dataForParticularIndex)
         return cell
     }
-    
     
 }
 

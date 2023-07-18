@@ -10,29 +10,31 @@ import UIKit
 
 class LoginCoordinator: Coordinator {
     
-    var navigationController: UINavigationController
-    var window: UIWindow
+    var navigationController: UINavigationController?
     
-    init(navigationController: UINavigationController, window: UIWindow) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.window = window
     }
     
     func start() {
-        guard let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {
+        guard let loginVC = UIStoryboard(name: Constants.Storyboard.main, bundle: nil).instantiateViewController(withIdentifier: Constants.ViewController.loginVC) as? LoginVC else {
             return
         }
         loginVC.coordinator = self
-        navigationController.pushViewController(loginVC, animated: true)
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
-    func gotoNewsCoordinator() {
-        guard let newsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
-            return
-        }
-        newsVC.coordinator = self
-        navigationController.pushViewController(newsVC, animated: true)
+    func gotoButtonList() {
+        let buttonCoordinator = ButtonCoordinator(navigationController: navigationController ?? UINavigationController())
+        buttonCoordinator.start()
     }
     
+    func finish() {
+        
+    }
+    
+    func finishToRootView() {
+        
+    }
     
 }

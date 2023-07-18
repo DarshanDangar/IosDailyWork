@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NewsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="NewsVC" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,12 +36,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="-27"/>
+            <point key="canvasLocation" x="105" y="-27"/>
         </scene>
-        <!--Login-->
+        <!--Register-->
         <scene sceneID="n32-dt-SQw">
             <objects>
-                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4JH-nJ-7bu" customClass="Login" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4JH-nJ-7bu" customClass="Register" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WO1-D4-ew2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q52-5B-K0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="-27"/>
+            <point key="canvasLocation" x="-633" y="-27"/>
         </scene>
         <!--Image Upload DownloadVC-->
         <scene sceneID="Bdn-pZ-TEO">
             <objects>
-                <viewController id="PX5-xO-8yr" customClass="ImageUploadDownloadVC" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageUploadDownloadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PX5-xO-8yr" customClass="ImageUploadDownloadVC" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgG-6T-waG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJ7-kw-dGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446.5648854961833" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1440" y="-27"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="gsR-iN-eBV">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUs-ri-D0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="-27"/>
+            <point key="canvasLocation" x="-2260" y="-3"/>
         </scene>
         <!--PeopleVC-->
         <scene sceneID="gWK-l0-PYi">
@@ -232,6 +232,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxG-Ch-h8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2832" y="-30"/>
+        </scene>
+        <!--Buttton ListVC-->
+        <scene sceneID="Nmc-Cv-4Y3">
+            <objects>
+                <viewController storyboardIdentifier="ButttonListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="85x-GI-oQV" customClass="ButttonListVC" customModule="WebServices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P6O-4b-cgo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-lC-arg">
+                                <rect key="frame" x="24" y="83" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Register">
+                                    <backgroundConfiguration key="background" cornerRadius="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnRegister:" destination="85x-GI-oQV" eventType="touchUpInside" id="drn-Nw-boH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-0U-3A2">
+                                <rect key="frame" x="24" y="142" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Upload &amp; Download">
+                                    <backgroundConfiguration key="background" cornerRadius="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnUploadDownload:" destination="85x-GI-oQV" eventType="touchUpInside" id="ic7-qZ-AMI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fg-Ga-KaA">
+                                <rect key="frame" x="24" y="201" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="News">
+                                    <backgroundConfiguration key="background" cornerRadius="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnNews:" destination="85x-GI-oQV" eventType="touchUpInside" id="27t-2E-Ce9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-X0-0xJ">
+                                <rect key="frame" x="24" y="260" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="UserList">
+                                    <backgroundConfiguration key="background" cornerRadius="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnUserList:" destination="85x-GI-oQV" eventType="touchUpInside" id="Ljb-wH-Peg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UKl-fz-oMA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pdZ-lC-arg" firstAttribute="leading" secondItem="UKl-fz-oMA" secondAttribute="leading" constant="24" id="5gn-Ke-D0t"/>
+                            <constraint firstItem="PmN-0U-3A2" firstAttribute="trailing" secondItem="pdZ-lC-arg" secondAttribute="trailing" id="Cmq-Rh-dFi"/>
+                            <constraint firstItem="PmN-0U-3A2" firstAttribute="top" secondItem="pdZ-lC-arg" secondAttribute="bottom" constant="24" id="IlW-ne-jNM"/>
+                            <constraint firstItem="2Fg-Ga-KaA" firstAttribute="top" secondItem="PmN-0U-3A2" secondAttribute="bottom" constant="24" id="P6g-NP-h0n"/>
+                            <constraint firstItem="PmN-0U-3A2" firstAttribute="leading" secondItem="pdZ-lC-arg" secondAttribute="leading" id="QTy-Hf-NbD"/>
+                            <constraint firstItem="2Fg-Ga-KaA" firstAttribute="trailing" secondItem="PmN-0U-3A2" secondAttribute="trailing" id="YCd-qW-Zbx"/>
+                            <constraint firstItem="2Fg-Ga-KaA" firstAttribute="leading" secondItem="PmN-0U-3A2" secondAttribute="leading" id="YLy-dR-sGG"/>
+                            <constraint firstItem="UKl-fz-oMA" firstAttribute="trailing" secondItem="pdZ-lC-arg" secondAttribute="trailing" constant="24" id="ZDp-dr-ryx"/>
+                            <constraint firstItem="tNd-X0-0xJ" firstAttribute="leading" secondItem="2Fg-Ga-KaA" secondAttribute="leading" id="ggZ-E1-qFO"/>
+                            <constraint firstItem="tNd-X0-0xJ" firstAttribute="trailing" secondItem="2Fg-Ga-KaA" secondAttribute="trailing" id="jxG-1B-oga"/>
+                            <constraint firstItem="tNd-X0-0xJ" firstAttribute="top" secondItem="2Fg-Ga-KaA" secondAttribute="bottom" constant="24" id="mbm-4t-FvM"/>
+                            <constraint firstItem="pdZ-lC-arg" firstAttribute="top" secondItem="UKl-fz-oMA" secondAttribute="top" constant="24" id="sU3-M7-9Qt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqo-Wo-XS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1549" y="-12"/>
         </scene>
     </scenes>
     <resources>

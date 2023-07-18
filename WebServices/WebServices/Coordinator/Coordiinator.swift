@@ -10,13 +10,8 @@ import UIKit
 
 @objc protocol Coordinator {
     
-    var navigationController: UINavigationController {get set}
-    @objc optional func popVc()
+    func start()
+    func finish()
+    func finishToRootView()
     
 }
-
-//func initiateVC(storyBoardName: String, identifier: String, navigationController: UINavigationController) {
-//    let storyboard = UIStoryboard(name: storyBoardName , bundle: nil)
-//    let vc = storyboard.instantiateViewController(withIdentifier: identifier)
-//    navigationController.pushViewController(vc, animated: true)
-//}

@@ -23,6 +23,7 @@ class ImageUploadDownloadVC: UIViewController {
     
     // MARK: Variables
     let imageVM = ImageUploadDownloadVM()
+    var coordinator: ButtonCoordinator?
     
     // MARK: IbActions
     @IBAction func btnUploadImage(_ sender: Any) {

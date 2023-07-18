@@ -9,8 +9,20 @@ import Foundation
 import UIKit
 
 class NewsCoordinator: Coordinator {
+    func start() {
+        
+    }
     
-    var navigationController: UINavigationController
+    func finish() {
+        
+    }
+    
+    func finishToRootView() {
+        
+    }
+    
+    
+    var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

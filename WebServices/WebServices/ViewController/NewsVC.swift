@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewsVC: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var tblNews: UITableView!
     var listOfNews:[Article]?
-    var coordinator: LoginCoordinator?
+    var coordinator: ButtonCoordinator?
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
@@ -30,8 +30,7 @@ class ViewController: UIViewController {
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { data,response,error in
             guard let responseData = data else{return}
             print("Data: \(responseData)")
-            if let urlResponse = response {
-                print("Url Response: \(urlResponse)")
+            if response != nil {
             }
             if let error = error?.localizedDescription {
                 print("error: \(error)")
@@ -56,7 +55,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: UITableView DataSource
-extension ViewController: UITableViewDataSource {
+extension NewsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listOfNews?.count ?? 0
         
@@ -73,7 +72,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 // MARK: UITableView Delegates
-extension ViewController: UITableViewDelegate {
+extension NewsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? ExpandTableViewCell
         if cell?.isTaped == true {

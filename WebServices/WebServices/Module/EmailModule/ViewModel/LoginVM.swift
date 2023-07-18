@@ -14,7 +14,7 @@ class LoginVM: NSObject {
     var onApiError = Dynamic<Error?>(nil)
     var onApiSucess = Dynamic<Data?>(nil)
     
-    func validation(email: String = "", password: String = "") {
+    func validation(email: String = Constants.emptyString, password: String = Constants.emptyString) {
         if !email.isEmpty && !password.isEmpty {
             let user = SignIn(email: email, password: password)
             let parameter = [

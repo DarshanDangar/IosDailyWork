@@ -12,9 +12,14 @@ class PeoopleVm {
     var userList = Dynamic<[Datum]>([])
     var onApiSucess = Dynamic<People?>(nil)
     var onApiError = Dynamic<Error?>(nil)
+    var currentPage = Dynamic<Int>(0)
+    var totalPage = Dynamic<Int>(0)
+    var isLoading = Dynamic<Bool>(false)
     
     func getDatafromServer() {
-        guard let url = URL(string: "https://reqres.in/api/users?page=2") else {
+        
+        currentPage.value += 1
+        guard let url = URL(string: "https://reqres.in/api/users?page=\(self.currentPage.value)&delay=2") else {
             return
         }
         let urlRequest = URLRequest(url: url)
@@ -28,9 +33,13 @@ class PeoopleVm {
             do {
                 let jsonData = try JSONDecoder().decode(People.self, from: data)
                 self.onApiSucess.value = jsonData
-                self.userList.value = jsonData.data
+                self.userList.value += jsonData.data
+                self.totalPage.value = jsonData.totalPages
+                self.isLoading.value = false
             } catch(let error) {
                 self.onApiError.value = error
+                self.currentPage.value -= 1
+                self.isLoading.value = true
             }
             
         }

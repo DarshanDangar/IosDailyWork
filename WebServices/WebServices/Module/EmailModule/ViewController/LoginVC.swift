@@ -15,22 +15,21 @@ class LoginVC: UIViewController {
     
     // MARK: Variables
     let loginVM = LoginVM()
-    let alert = UIAlertController(title: "Sucessfully", message: "Login SucessFully", preferredStyle: .alert)
     var coordinator: LoginCoordinator?
     
      // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        bindViewModel()
     }
     
     func bindViewModel() {
         loginVM.onApiError.bind({ error in
-            print(error?.localizedDescription ?? "")
+            print(error?.localizedDescription ?? Constants.emptyString)
         })
-        loginVM.onApiSucess.bind({ data in
-            self.coordinator?.gotoNewsCoordinator()
-            self.present(self.alert, animated: true)
+        loginVM.onApiSucess.bind({ [weak self] data in
+            UserDefaults.standard.set(true, forKey: "login")
+            self?.coordinator?.gotoButtonList()
         })
     }
     

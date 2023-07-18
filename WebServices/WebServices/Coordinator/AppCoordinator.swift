@@ -10,17 +10,29 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     
-    var navigationController: UINavigationController
-    var window: UIWindow
+    var childCoordinators: [Coordinator] = []
+    var navigationController: UINavigationController?
     
-    init(navigationController: UINavigationController, window: UIWindow) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.window = window
     }
     
     func start() {
-        let homeCoordinator = LoginCoordinator(navigationController: navigationController, window: window)
-        homeCoordinator.start()
+        if UserDefaults.standard.bool(forKey: "login") {
+            let homeCoordinator = ButtonCoordinator(navigationController: navigationController ?? UINavigationController())
+            homeCoordinator.start()
+        } else {
+            let homeCoordinator = LoginCoordinator(navigationController: navigationController ?? UINavigationController())
+            homeCoordinator.start()
+        }
+    }
+    
+    func finish() {
+        
+    }
+    
+    func finishToRootView() {
+        
     }
     
 }

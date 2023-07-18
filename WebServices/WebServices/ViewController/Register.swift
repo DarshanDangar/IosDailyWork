@@ -16,13 +16,15 @@ struct User: Codable {
     }
 }
 
-class Login: UIViewController {
+class Register: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
+    // MARK: Variables
     var user = ["email": "password"]
+    var coordinator: ButtonCoordinator?
     
     // MARK: View LifeCycle
     override func viewDidLoad() {
