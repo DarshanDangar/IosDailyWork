@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionReusableViewforHeader" id="U6b-Vx-4bR" customClass="CollectionReusableViewforHeader" customModule="AutoLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-cw-lOx">
+                    <rect key="frame" x="0.0" y="9" width="320" height="32"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPg-Sz-yAU">
+                            <rect key="frame" x="6" y="5.9999999999999982" width="41.333333333333336" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUA-dZ-HUC">
+                            <rect key="frame" x="279" y="8" width="41" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="See all">
+                                <color key="titleColor" name="lblColour"/>
+                            </state>
+                            <connections>
+                                <action selector="btnListOrGrid:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="CDv-Jd-h9z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="viewBG"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OUA-dZ-HUC" secondAttribute="trailing" id="ITQ-Sg-bds"/>
+                        <constraint firstItem="bPg-Sz-yAU" firstAttribute="leading" secondItem="SuX-cw-lOx" secondAttribute="leading" constant="6" id="LAm-OI-Msa"/>
+                        <constraint firstItem="OUA-dZ-HUC" firstAttribute="top" secondItem="SuX-cw-lOx" secondAttribute="top" constant="8" id="tmQ-NQ-IZE"/>
+                        <constraint firstItem="bPg-Sz-yAU" firstAttribute="centerY" secondItem="SuX-cw-lOx" secondAttribute="centerY" id="xkz-jO-QwM"/>
+                        <constraint firstItem="OUA-dZ-HUC" firstAttribute="centerY" secondItem="bPg-Sz-yAU" secondAttribute="centerY" id="ycr-2G-hLT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="SuX-cw-lOx" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Fan-AD-8Vl"/>
+                <constraint firstItem="SuX-cw-lOx" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="fme-ai-nlf"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="SuX-cw-lOx" secondAttribute="bottom" constant="9" id="pw1-QD-qRR"/>
+                <constraint firstItem="SuX-cw-lOx" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="sAw-lA-Pi1"/>
+            </constraints>
+            <connections>
+                <outlet property="btnSeeAll" destination="OUA-dZ-HUC" id="93c-Ma-McO"/>
+                <outlet property="lblCategoryType" destination="bPg-Sz-yAU" id="CxP-vf-Jrq"/>
+            </connections>
+            <point key="canvasLocation" x="131.29770992366412" y="-32.394366197183103"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="lblColour">
+            <color red="0.070588235294117646" green="0.078431372549019607" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewBG">
+            <color red="0.84313725490196079" green="0.84705882352941175" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

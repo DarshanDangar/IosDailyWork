@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailsExpandRowTableViewCell" rowHeight="98" id="KGk-i7-Jjw" customClass="DetailsExpandRowTableViewCell" customModule="AutoLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="DetailsExpandRowTableViewCell" customModule="AutoLayout" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CompanyName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw6-dK-LVC">
+                        <rect key="frame" x="148" y="18" width="118" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LO-Cr-OaN">
+                        <rect key="frame" x="167.66666666666666" y="70" width="78.666666666666657" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAI-7A-481">
+                        <rect key="frame" x="190.33333333333334" y="44" width="33.666666666666657" height="15.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cw6-dK-LVC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="2lF-rb-cql"/>
+                    <constraint firstItem="HAI-7A-481" firstAttribute="top" secondItem="cw6-dK-LVC" secondAttribute="bottom" constant="5" id="2sP-4N-eH3"/>
+                    <constraint firstItem="9LO-Cr-OaN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4fg-AG-zJl"/>
+                    <constraint firstItem="9LO-Cr-OaN" firstAttribute="top" secondItem="HAI-7A-481" secondAttribute="bottom" constant="10.333333333333336" id="9XV-6x-wPh"/>
+                    <constraint firstItem="cw6-dK-LVC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="cvf-Rz-feD"/>
+                    <constraint firstItem="HAI-7A-481" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kqO-P3-fdY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblCompanyname" destination="cw6-dK-LVC" id="KFA-ed-MtJ"/>
+                <outlet property="lblDiscription" destination="9LO-Cr-OaN" id="eBv-K5-L1u"/>
+                <outlet property="lblSince" destination="HAI-7A-481" id="jfV-qi-aNx"/>
+            </connections>
+            <point key="canvasLocation" x="201.52671755725191" y="7.746478873239437"/>
+        </tableViewCell>
+    </objects>
+</document>
