@@ -25,11 +25,11 @@ class NewsVC: UIViewController {
     
     // MARK: Get Data from Server
     private func getDataFromServer() {
-        guard let url = URL(string: "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=437be1e793b144ef85c0b8ffae9b36c5") else {return}
+        guard let baseUrl = Bundle.main.object(forInfoDictionaryKey: "baseUrlNews") as? String else {return}
+        guard let url = URL(string: "\(baseUrl)v2/everything?domains=wsj.com&apiKey=437be1e793b144ef85c0b8ffae9b36c5") else {return}
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { data,response,error in
             guard let responseData = data else{return}
-            print("Data: \(responseData)")
             if response != nil {
             }
             if let error = error?.localizedDescription {

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class LoginVM: NSObject {
-
+    
     var onApiError = Dynamic<Error?>(nil)
     var onApiSucess = Dynamic<Data?>(nil)
     
@@ -21,8 +21,9 @@ class LoginVM: NSObject {
                 "email": user.email,
                 "password": user.password
             ]
+            guard let baseUrl = Bundle.main.object(forInfoDictionaryKey: "baseUrl") as? String else {return}
             
-            AF.request("https://reqres.in/api/login", method: .post, parameters: parameter).response { response in
+            AF.request("\(baseUrl)api/login", method: .post, parameters: parameter).response { response in
                 switch response.result {
                 case .success(let data):
                     self.onApiSucess.value = data

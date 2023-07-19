@@ -106,14 +106,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		7D0817872A5714C800A682C0 /* Dynamic */ = {
-			isa = PBXGroup;
-			children = (
-				7D0817882A5714DE00A682C0 /* Dynamic.swift */,
-			);
-			path = Dynamic;
-			sourceTree = "<group>";
-		};
 		7D08178A2A57173B00A682C0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +171,6 @@
 		7D5493982A4FE07900662F12 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				7D0817872A5714C800A682C0 /* Dynamic */,
 				7DECFEF62A52CF27004523F4 /* Helper */,
 				7D0817842A57098500A682C0 /* Constants */,
 				7D9565EF2A56B60700AB854C /* Coordinator */,
@@ -188,9 +179,9 @@
 				7D99FDF42A551DC900FC6ACE /* Model */,
 				7D99FDF32A551DAA00FC6ACE /* ViewController */,
 				7D5493AD2A5043F400662F12 /* TblCell */,
-				7D99FDF22A551D6100FC6ACE /* AppDelegate */,
-				7D5493A22A4FE07B00662F12 /* Assets.xcassets */,
 				7D5493A72A4FE07B00662F12 /* Info.plist */,
+				7D99FDF22A551D6100FC6ACE /* AppDelegate */,
+				7DB5B7142A67A538002C8112 /* Resources */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -330,10 +321,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7DB5B7142A67A538002C8112 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D5493A22A4FE07B00662F12 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7DECFEF62A52CF27004523F4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				7DECFEF72A52CF44004523F4 /* WebService.swift */,
+				7D0817882A5714DE00A682C0 /* Dynamic.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -518,7 +518,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "\"https://reqres.in/\"";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -579,7 +578,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "\"https://reqres.in/\"";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -636,6 +634,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://reqres.in/";
+				BASE_URL_IMAGE = "https://api.imgbb.com/";
+				BASE_URL_NEWS = "https://newsapi.org/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -664,6 +665,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://reqres.in/";
+				BASE_URL_IMAGE = "https://api.imgbb.com/";
+				BASE_URL_NEWS = "https://newsapi.org/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

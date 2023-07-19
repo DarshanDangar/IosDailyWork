@@ -17,9 +17,9 @@ class PeoopleVm {
     var isLoading = Dynamic<Bool>(false)
     
     func getDatafromServer() {
-        
+        let baseUrl = Bundle.main.object(forInfoDictionaryKey: "baseUrl") as? String ?? ""
         currentPage.value += 1
-        guard let url = URL(string: "https://reqres.in/api/users?page=\(self.currentPage.value)&delay=2") else {
+        guard let url = URL(string: baseUrl+"api/users?page=\(self.currentPage.value)&delay=2") else {
             return
         }
         let urlRequest = URLRequest(url: url)
