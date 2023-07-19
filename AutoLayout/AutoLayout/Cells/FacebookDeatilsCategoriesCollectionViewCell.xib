@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FacebookDeatilsCategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="FacebookDeatilsCategoriesCollectionViewCell" customModule="AutoLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="89" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="89" height="41"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-z0-GK3">
+                        <rect key="frame" x="0.0" y="0.0" width="89" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8l-no-ouD">
+                                <rect key="frame" x="4" y="4" width="81" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f8l-no-ouD" firstAttribute="top" secondItem="Vqu-z0-GK3" secondAttribute="top" constant="4" id="4Ow-uC-IZ1"/>
+                            <constraint firstItem="f8l-no-ouD" firstAttribute="leading" secondItem="Vqu-z0-GK3" secondAttribute="leading" constant="4" id="Bdx-gu-QYe"/>
+                            <constraint firstAttribute="bottom" secondItem="f8l-no-ouD" secondAttribute="bottom" constant="4" id="CrE-3O-FvN"/>
+                            <constraint firstAttribute="trailing" secondItem="f8l-no-ouD" secondAttribute="trailing" constant="4" id="nYE-8k-0lg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.37254901959999998" green="0.29411764709999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vqu-z0-GK3" secondAttribute="trailing" id="1tY-j8-YnA"/>
+                <constraint firstItem="Vqu-z0-GK3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JKX-HH-X8P"/>
+                <constraint firstAttribute="bottom" secondItem="Vqu-z0-GK3" secondAttribute="bottom" id="MVP-FQ-PVP"/>
+                <constraint firstItem="Vqu-z0-GK3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YJr-ig-N2W"/>
+            </constraints>
+            <size key="customSize" width="89" height="41"/>
+            <connections>
+                <outlet property="lblFacebookCategorisDetails" destination="f8l-no-ouD" id="BTq-QK-gGz"/>
+            </connections>
+            <point key="canvasLocation" x="212.97709923664121" y="-36.267605633802816"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
