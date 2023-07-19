@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderViewTableViewCell" id="KGk-i7-Jjw" customClass="HeaderViewTableViewCell" customModule="KtScreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="501"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="501"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BdU-3b-UEa">
+                        <rect key="frame" x="0.0" y="16" width="378" height="477"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5es-EV-220">
+                                <rect key="frame" x="0.0" y="0.0" width="378" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="OAg-Du-fRU"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gNM-at-zXR">
+                                <rect key="frame" x="0.0" y="176" width="378" height="91.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qNg-wc-IPy">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="35.333333333333336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C1q-pA-QtG">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="35.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" verticalHuggingPriority="251" text="Location ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERv-Vo-cJ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="lblPlaceHolder"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="240" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7x-pH-mhd">
+                                                        <rect key="frame" x="0.0" y="19" width="179" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <color key="textColor" name="lblTxtColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pmn-GO-irf">
+                                                <rect key="frame" x="199" y="0.0" width="179" height="35.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Parking Lot Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKL-XA-doU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="lblPlaceHolder"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="100" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhN-I1-WOy">
+                                                        <rect key="frame" x="0.0" y="19" width="179" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <color key="textColor" name="lblTxtColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0sw-6j-JGM">
+                                        <rect key="frame" x="0.0" y="57" width="378" height="34.333333333333343"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NeN-PG-atw">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Operating Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohe-Ej-6PW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="lblPlaceHolder"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh9-pu-0PW">
+                                                        <rect key="frame" x="0.0" y="18" width="179" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <color key="textColor" name="lblTxtColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-wk-3pr">
+                                                <rect key="frame" x="199" y="0.0" width="179" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Location Phone No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPk-xh-anw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="lblPlaceHolder"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDp-Zd-ZSl">
+                                                        <rect key="frame" x="0.0" y="18" width="179" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <color key="textColor" name="lblTxtColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-Aa-O0A">
+                                <rect key="frame" x="0.0" y="285.33333333333331" width="378" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="i7z-MR-M1a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <color key="textColor" name="lblTxtColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ixh-8I-XYX">
+                                <rect key="frame" x="0.0" y="313.33333333333331" width="378" height="109.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="icf-Do-8XO"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="068-Bs-Cpm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="icf-Do-8XO"/>
+                                    </mask>
+                                </variation>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mdN-tv-bWo">
+                                <rect key="frame" x="0.0" y="441" width="378" height="37"/>
+                                <color key="backgroundColor" name="segmentBg"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="xig-ps-GUe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Attendant"/>
+                                    <segment title="Valet"/>
+                                    <segment title="Enforcement"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="segmentSelectColor"/>
+                                <connections>
+                                    <action selector="onTapSegmentController:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Zgy-By-JYg"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="BdU-3b-UEa" secondAttribute="bottom" constant="8" id="VfP-F4-G8H"/>
+                    <constraint firstAttribute="trailing" secondItem="BdU-3b-UEa" secondAttribute="trailing" id="dud-hF-iD3"/>
+                    <constraint firstItem="BdU-3b-UEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vVI-j7-epq"/>
+                    <constraint firstItem="BdU-3b-UEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vwT-tO-emA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amentiesCollectionView" destination="Ixh-8I-XYX" id="aR3-CO-i8s"/>
+                <outlet property="clVHeight" destination="icf-Do-8XO" id="wlA-Fi-NsZ"/>
+                <outlet property="imgParkingLot" destination="5es-EV-220" id="HIs-c0-6df"/>
+                <outlet property="lblLocationId" destination="K7x-pH-mhd" id="Avp-fm-kAd"/>
+                <outlet property="lblLocationPhoneNo" destination="EDp-Zd-ZSl" id="C6l-Hy-MAH"/>
+                <outlet property="lblOperatingHours" destination="Uh9-pu-0PW" id="dQ2-Hk-n22"/>
+                <outlet property="lblParkingLotName" destination="OhN-I1-WOy" id="sAq-XF-b7I"/>
+                <outlet property="segmentController" destination="mdN-tv-bWo" id="7BW-mP-rjs"/>
+            </connections>
+            <point key="canvasLocation" x="-345.03816793893128" y="101.7605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="lblPlaceHolder">
+            <color red="0.50199997425079346" green="0.51800000667572021" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lblTxtColor">
+            <color red="0.067000001668930054" green="0.067000001668930054" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="segmentBg">
+            <color red="0.9137254901960784" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="segmentSelectColor">
+            <color red="0.027000000700354576" green="0.45899999141693115" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
