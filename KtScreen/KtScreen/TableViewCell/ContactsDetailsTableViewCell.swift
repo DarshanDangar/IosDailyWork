@@ -27,7 +27,8 @@ class ContactsDetailsTableViewCell: UITableViewCell {
     
     // MARK: config Cell
     func configCell(data: ContectsModel) {
-        imgPerson.image = UIImage(named: data.imgOfperson)
+        let image = UIImage(named: data.imgOfperson)
+        imgPerson.image = image
         lblPersonName.text = data.nameOfPerson
         lblPhoneNo.text = data.contactNo1
     }
