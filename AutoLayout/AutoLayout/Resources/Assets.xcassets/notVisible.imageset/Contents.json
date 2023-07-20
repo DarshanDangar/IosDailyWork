@@ -1,16 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "notVisibleLight.png",
-      "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
       "filename" : "notVisibleLight 1.png",
       "idiom" : "universal"
     },

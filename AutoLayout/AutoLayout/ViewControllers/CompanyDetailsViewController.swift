@@ -12,7 +12,7 @@ class CompanyDetailsViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var tblCompanyDetails: UITableView!
     
-    private var arrCompanyDetails = CompanyDeatilsModel.deatilsOfCompany
+    private var arrCompanyDetails = Article.deatilsOfCompany
     
     // MARK: View LifeCycle
     override func viewDidLoad() {

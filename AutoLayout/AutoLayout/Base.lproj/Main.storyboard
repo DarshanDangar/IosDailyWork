@@ -398,7 +398,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="NrS-r3-jBc"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="TableView">
+                                                        <buttonConfiguration key="configuration" style="tinted" title="Company Details">
                                                             <backgroundConfiguration key="background" cornerRadius="16"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -476,7 +476,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="7oe-XP-lwp"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="TableView">
+                                                        <buttonConfiguration key="configuration" style="tinted" title="Collection In Table View">
                                                             <backgroundConfiguration key="background" cornerRadius="16"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -3022,7 +3022,7 @@ looking for?</string>
         <!--Picker Image View Controller-->
         <scene sceneID="lgP-lE-8p7">
             <objects>
-                <viewController id="jRP-Yy-hki" customClass="PHPickerImageViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PHPickerImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jRP-Yy-hki" customClass="PHPickerImageViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbE-eq-ufU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3052,7 +3052,7 @@ looking for?</string>
                     </view>
                     <navigationItem key="navigationItem" id="9r9-LE-6dT"/>
                     <connections>
-                        <outlet property="setImageOnImageView" destination="17c-jP-kYe" id="2X1-X6-goz"/>
+                        <outlet property="imageOnImageView" destination="17c-jP-kYe" id="v5y-f6-c4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnv-B9-0KI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3814,11 +3814,11 @@ looking for?</string>
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ts-Y6-pKg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
                                         <imageryMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-sg-tJz">
-                                        <rect key="frame" x="0.0" y="730" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="714" width="414" height="60"/>
                                         <items>
                                             <barButtonItem title="Route" id="s3d-Qu-Qck">
                                                 <connections>

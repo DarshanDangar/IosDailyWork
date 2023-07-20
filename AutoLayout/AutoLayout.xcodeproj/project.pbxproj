@@ -31,7 +31,7 @@
 		7D846BA02A2A21F40048A062 /* ExpandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D846B9E2A2A21F40048A062 /* ExpandTableViewCell.swift */; };
 		7D846BA12A2A21F40048A062 /* ExpandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D846B9F2A2A21F40048A062 /* ExpandTableViewCell.xib */; };
 		7D84CFDB2A2A0A8E00108B22 /* CompanyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84CFD92A2A0A8E00108B22 /* CompanyDetailsViewController.swift */; };
-		7D84CFDE2A2A0C4D00108B22 /* CompanyDeatilsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84CFDD2A2A0C4D00108B22 /* CompanyDeatilsModel.swift */; };
+		7D84CFDE2A2A0C4D00108B22 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84CFDD2A2A0C4D00108B22 /* Article.swift */; };
 		7D9095882A39D66D00AE5299 /* Poppins-1 in Resources */ = {isa = PBXBuildFile; fileRef = 7D9095872A39D66D00AE5299 /* Poppins-1 */; };
 		7D90958B2A39D96400AE5299 /* ListAndGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9095892A39D96400AE5299 /* ListAndGridCollectionViewCell.swift */; };
 		7D90958C2A39D96400AE5299 /* ListAndGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D90958A2A39D96400AE5299 /* ListAndGridCollectionViewCell.xib */; };
@@ -114,7 +114,7 @@
 		7D846B9E2A2A21F40048A062 /* ExpandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandTableViewCell.swift; sourceTree = "<group>"; };
 		7D846B9F2A2A21F40048A062 /* ExpandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandTableViewCell.xib; sourceTree = "<group>"; };
 		7D84CFD92A2A0A8E00108B22 /* CompanyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsViewController.swift; sourceTree = "<group>"; };
-		7D84CFDD2A2A0C4D00108B22 /* CompanyDeatilsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDeatilsModel.swift; sourceTree = "<group>"; };
+		7D84CFDD2A2A0C4D00108B22 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		7D9095872A39D66D00AE5299 /* Poppins-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Poppins-1"; sourceTree = "<group>"; };
 		7D9095892A39D96400AE5299 /* ListAndGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAndGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D90958A2A39D96400AE5299 /* ListAndGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListAndGridCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				7D7C14622A278D98008E8769 /* JobModel.swift */,
-				7D84CFDD2A2A0C4D00108B22 /* CompanyDeatilsModel.swift */,
+				7D84CFDD2A2A0C4D00108B22 /* Article.swift */,
 				7DEFB1562A2B62EE001A3953 /* CategoriesModel.swift */,
 				7DF051F32A2E10E300AD61FF /* JobModelForTableView.swift */,
 				7D7D1EDB2A31D83800F89CB3 /* OpeningJobModel.swift */,
@@ -481,7 +481,7 @@
 				7D7D1ED92A31D55B00F89CB3 /* NestedCollectionInTableViewCell.swift in Sources */,
 				7DEFB1572A2B62EE001A3953 /* CategoriesModel.swift in Sources */,
 				7DF051E92A2DEF5600AD61FF /* JobTypeTableViewCell.swift in Sources */,
-				7D84CFDE2A2A0C4D00108B22 /* CompanyDeatilsModel.swift in Sources */,
+				7D84CFDE2A2A0C4D00108B22 /* Article.swift in Sources */,
 				7DE60C582A24B81D00942CF6 /* PageControllerViewController.swift in Sources */,
 				7D0602C82A3728FA007206BC /* ViewController.swift in Sources */,
 				7DC13B2B2A0F5CAD00112FDE /* JobSeekLoginViewController.swift in Sources */,

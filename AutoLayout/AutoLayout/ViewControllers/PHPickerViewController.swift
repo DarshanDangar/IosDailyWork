@@ -68,8 +68,6 @@ extension PHPickerImageViewController: PHPickerViewControllerDelegate {
                 }
                 
                 if let videoURL = url as? URL {
-                    // Handle the video URL
-                    // You can use AVPlayerViewController to present the video
                     
                     let playerViewController = AVPlayerViewController()
                     let player = AVPlayer(url: videoURL)

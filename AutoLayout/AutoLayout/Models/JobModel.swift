@@ -17,23 +17,23 @@ class JobModel {
         self.companyName = companyName
     }
     
-    static var arrayJobModel: [JobModel] = [JobModel("Image 1", "Google"),
-                                            JobModel("Image 2", "Facebook"),
-                                            JobModel("Image 3", "Instagram"),
-                                            JobModel("Image 4", "VideoPlayer"),
-                                            JobModel("Image 5", "Twiter"),
-                                            JobModel("Image 6", "Simform"),
-                                            JobModel("Image 1", "Google"),
-                                            JobModel("Image 2", "Facebook"),
-                                            JobModel("Image 3", "Instagram"),
-                                            JobModel("Image 4", "VideoPlayer"),
-                                            JobModel("Image 5", "Twiter"),
-                                            JobModel("Image 6", "Simform"),
-                                            JobModel("Image 1", "Google"),
-                                            JobModel("Image 2", "Facebook"),
-                                            JobModel("Image 3", "Instagram"),
-                                            JobModel("Image 4", "VideoPlayer"),
-                                            JobModel("Image 5", "Twiter"),
-                                            JobModel("Image 6", "Simform")]
+    static var arrayJobModel: [JobModel] = [JobModel("Google", "Google"),
+                                            JobModel("Facebook", "Facebook"),
+                                            JobModel("instagram", "Instagram"),
+                                            JobModel("videoplayer", "VideoPlayer"),
+                                            JobModel("twiter", "Twiter"),
+                                            JobModel("simform", "Simform"),
+                                            JobModel("Google", "Google"),
+                                            JobModel("Facebook", "Facebook"),
+                                            JobModel("instagram", "Instagram"),
+                                            JobModel("videoplayer", "VideoPlayer"),
+                                            JobModel("twiter", "Twiter"),
+                                            JobModel("simform", "Simform"),
+                                            JobModel("Google", "Google"),
+                                            JobModel("Facebook", "Facebook"),
+                                            JobModel("instagram", "Instagram"),
+                                            JobModel("videoplayer", "VideoPlayer"),
+                                            JobModel("twiter", "Twiter"),
+                                            JobModel("simform", "Simform")]
     
 }

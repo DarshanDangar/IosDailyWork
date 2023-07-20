@@ -9,8 +9,8 @@ import UIKit
 
 class ExpandTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var lblCompanyname: UILabel!
-    @IBOutlet weak var lblSince: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblAuthor: UILabel!
     @IBOutlet weak var lblDiscription: UILabel!
     
     // MARK: Variables
@@ -21,11 +21,17 @@ class ExpandTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    //    // MARK: config Cell
+    // MARK: config Cell
     func configcell(data: Article?) {
-        lblCompanyname.text = data?.title
-        lblSince.text = data?.author
+        lblTitle.text = data?.title
+        lblAuthor.text = data?.author
         lblDiscription.text = data?.description
+        if isTaped {
+            lblDiscription.numberOfLines = 0
+        } else {
+            lblDiscription.numberOfLines = 1
+        }
+        
     }
     
 }

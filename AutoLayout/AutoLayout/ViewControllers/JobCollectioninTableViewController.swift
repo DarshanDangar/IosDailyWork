@@ -31,7 +31,6 @@ class JobCollectioninTableViewController: UIViewController {
         jobTypeTableView.register(UINib(nibName: Constant.TblCell.jobTypeTableViewCell, bundle: nil), forCellReuseIdentifier: Constant.TblCell.jobTypeTableViewCell)
         jobTypeTableView.register(UINib(nibName: Constant.TblCell.jobTypeCollectionInTableViewCell, bundle: nil), forCellReuseIdentifier: Constant.TblCell.jobTypeCollectionInTableViewCell)
         jobTypeTableView.register(UINib(nibName: Constant.TblCell.tableViewHeader, bundle: nil), forCellReuseIdentifier: Constant.TblCell.tableViewHeader)
-        jobTypeTableView.register(UINib(nibName: Constant.TblCell.tableViewFooterCell, bundle: nil), forCellReuseIdentifier: Constant.TblCell.tableViewFooterCell)
     }
     
 }
