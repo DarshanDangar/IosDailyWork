@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class ImageUploadDownloadVM: NSObject {
+
+class ImageUploadDownloadVM {
     var onApiError: ((String) -> Void)?
     var uploadImage: (() -> ())?
     var downloadImage: ((UIImage) -> ())?
